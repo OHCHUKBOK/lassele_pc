@@ -1,0 +1,37 @@
+.vendorDetail ._tableLayout { gap: 20px; } 
+.vendorDetail ._tableLayout .top { position: relative; height: 32px; } 
+.vendorDetail ._tableLayout .top ._tab { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); } 
+
+/*담당자 정보*/
+.vendorDetail.manager .managerList { display: flex; flex-direction: column; gap: 10px; } 
+.vendorDetail.manager .managerList > ul { display: flex; gap: 10px; flex-wrap: wrap; } 
+.vendorDetail.manager .managerList > ul > li { transition: 0.2s all; background-color: var(--color_01); width:calc((100% - 20px)/3); padding: 24px; position: relative; display: flex; flex-direction: column; gap: 10px; } 
+.vendorDetail.manager .managerList > ul > li ._lineGroupBox { position: absolute; right: 12px; top: 16px;; } 
+.vendorDetail.manager .managerList > ul > li ._textSet.name { padding-bottom: 10px; } 
+.vendorDetail.manager .managerList > ul > li.empty { background-color: #fff; width: 100%; text-align: center; } 
+.vendorDetail.manager .managerList > ul > li.empty div { color: var(--color_08); } 
+.vendorDetail.manager .managerList > ul > li.empty:hover { box-shadow: none; cursor: auto;; } 
+
+/*정산기준관리*/
+.vendorDetail.calculate .calculateLayout { display: flex; gap: 24px; height: calc(100vh - 190px); border-top: var(--basic_line); } 
+.vendorDetail.calculate .calculateLayout .calculateList { width: 35%; padding-top: 24px; flex:1; } 
+.vendorDetail.calculate .calculateLayout .calculateSet { width: 65%; border-left: var(--basic_line); padding-left: 24px; padding-top: 24px; display: flex; flex-direction: column; gap: 10px; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .SetTop { display: flex; border: var(--basic_line); border-right: 0; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .SetTop li { border-right: var(--basic_line); flex:1; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .SetTop li .tit { border-bottom: var(--basic_line); text-align: center; padding:6px 14px; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .SetTop li .box { padding: 16px; display: flex; height: 60px; justify-content: center; align-items: center; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .SetTop li .box input { text-align: right; width: 100%; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .SetTop li .box select { width: 100%; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .Setbottom { display: flex; height: calc(100% - 170px); border:var(--basic_line); border-right: 0; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .Setbottom .box { flex-grow: 1; display: flex; flex-direction: column; border-right: var(--basic_line); width: calc(100% / 4); } 
+.vendorDetail.calculate .calculateLayout .calculateSet .Setbottom .box ul { flex: 1; position: relative; overflow-y: auto; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .Setbottom .box ul li { display: flex; padding:0 14px; height: 30px; align-items: center; border-bottom: var(--basic_line); transition: 0.2s all; justify-content: space-between; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .Setbottom .box ul li.empty { justify-content: center; height: 100px; border:0; color: var(--color_07); } 
+.vendorDetail.calculate .calculateLayout .calculateSet .Setbottom .box ul li.empty:hover { background-color: transparent; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .Setbottom .box > .tit { height: 60px; display: flex; align-items: center; border-bottom: var(--basic_line); width: 100%;; justify-content: center; background-color: var(--color_01); } 
+.vendorDetail.calculate .calculateLayout .calculateSet .Setbottom .box ul li:hover { background-color: var(--color_01); } 
+.vendorDetail.calculate .calculateLayout .calculateSet .Setbottom .box ul li ._delBtn { opacity: 0; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .Setbottom .box ul li:hover ._delBtn { opacity: 1; } 
+.vendorDetail.calculate .calculateLayout .calculateSet .Setbottom .box .editBtn { width: 100%; justify-content: center; display: flex; height: 36px; align-items: center; border-top: var(--basic_line); } 
+.vendorDetail.calculate .calculateLayout .calculateSet .Setbottom .box .editBtn button { width: 100%; height: 100%; } 
+/*적용모델*/

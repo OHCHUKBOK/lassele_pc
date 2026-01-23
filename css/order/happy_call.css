@@ -1,0 +1,16 @@
+section { height: 100vh; } 
+.container { display: flex; overflow: hidden; } 
+.happyCall { display: flex; height: 100%; gap: 10px;; overflow: hidden; } 
+.happyCall .orderList { width: 40%; height: 100%; display: flex; flex-direction: column; gap: 10px; } 
+.happyCall .orderList .top { display: flex; justify-content: space-between; align-items: center; } 
+.happyCall .orderList .top ._searchGroup { padding: 0; } 
+.happyCall .orderList .top ._searchGroup input.basic { width: 140px; } 
+.happyCall .orderList .top ._textSet { padding-top: 24px; } 
+.happyCall .customerInfo { width: 26%; } 
+.happyCall .customerInfo th { width: 120px; } 
+.happyCall .customerInfo p { word-wrap: break-word; overflow-wrap: break-word;white-space: normal; } 
+.happyCall .questionList { flex: 1; display: flex; flex-direction: column; gap: 14px; overflow-y: auto;; } 
+.happyCall .questionList ul { display: flex; flex-direction: column; gap: 10px; } 
+.happyCall .questionList ul li { background-color: var(--color_01); padding: 14px 20px; display: flex; flex-direction: column; gap: 16px; } 
+.happyCall .questionList ul li .question { font:var(--body_M)}
+.happyCall .questionList ul li input[type="text"] { width: 100%; } 

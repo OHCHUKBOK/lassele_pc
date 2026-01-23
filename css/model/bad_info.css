@@ -1,0 +1,22 @@
+section { height: 100vh; } 
+.container { display: flex; gap: 12px; overflow: hidden; } 
+
+._layBoxList.product { width: 240px; } 
+._layBoxList.set { width: calc(100% - 240px); display: flex; gap:0 24px; flex-wrap: wrap; } 
+._layBoxList.set ._tableLayout { height:100%; height: calc(100% - 42px); } 
+._layBoxList.set > ._bottomBtnBox { width: 100%; border-top: var(--basic_line); padding-top: 10px; } 
+._layBoxList.set ._tableLayout.faultySymptom { width:calc(65% - 24px); border-right: var(--basic_line); padding-right: 24px; } 
+
+
+._tableLayout.faultyCause { width: 35%; } 
+input { background-color: transparent!important; } 
+select { background-color: transparent!important; } 
+._actOnOff .on input { background-color: var(--list_on); } 
+._actOnOff .on select { background-color: var(--list_on); } 
+._actOnOff tr:hover input { background-color: var(--list_on); } 
+._actOnOff tr:hover select { background-color: var(--list_on); } 
+._actOnOff tr:hover td { cursor: pointer;; } 
+._actOnOff .on p { color: var(--blue); } 
+._actOnOff .on .basic { color: var(--blue); } 
+/*._actOnOff tr.on { border:1px solid var(--blue); box-shadow:0px 0px 0px 1px var(--color_00), 0px 0px 10px rgba(69, 92, 220, 0.3); } */
+._tableBox.headFix._scroll { max-height: initial; } 

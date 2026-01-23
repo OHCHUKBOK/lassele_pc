@@ -1,0 +1,10 @@
+.wrapper > section { height: 100vh; flex-direction: row; } 
+.container.list { display: flex; flex-direction: column; gap: 12px; flex: 1; } 
+.container.detail { min-width:420px; max-width: 500px; } 
+.container.detail ._layBoxList { gap: 10px; display: flex; flex-direction: column; } 
+.container.detail th { width: 100px; } 
+.container.detail th p.c { justify-content: center; } 
+.container.detail td { white-space: normal; } 
+.container.detail td p { line-height: 150%; } 
+.container.detail td textarea { min-height:100px; }
+.container.detail td .basic { background-color: var(--yellow_03); } 

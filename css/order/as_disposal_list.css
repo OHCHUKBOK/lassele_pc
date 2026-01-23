@@ -1,0 +1,9 @@
+
+._searchGroup select.basic { min-width: 100px; } 
+.wrapper > section ._searchGroup select { min-width: 100px; } 
+._btnSearch input { width: 100px; min-width: 100px; } 
+._searchGroup ._searchBox { width: 120px; } 
+._searchGroup ._searchBox input:disabled { background-color: var(--color_00); } 
+._searchGroup ._searchBox input { min-width: 80px; } 
+.periodGroup input.basic { width: 100px; } 
+._searchGroup { gap: 10px; } 

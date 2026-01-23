@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+	<meta name="format-detection" content="telephone=no">
+    <title>대영테크닉스-모델정보관리</title>
+
+    <link rel="icon" type="image/x-icon" href="../../img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="../../img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../../img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../../img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../../img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../../img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../../img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../../img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../../img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../../img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../../img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon/favicon-16x16.png">
+
+
+    <link rel="stylesheet" href="../../css/plugin/jquery-ui.css"/> 
+	<link rel="stylesheet" href="../../css/common/reset.css"/> 
+    <link rel="stylesheet" href="../../css/common/root.css"/> 
+	<link rel="stylesheet" href="../../css/common/font.css"/> 
+    <link rel="stylesheet" href="../../css/common/common.css"/> 
+	<link rel="stylesheet" href="../../css/common/layout.css"/> 
+	<link rel="stylesheet" href="../../css/common/popup.css"/>
+
+    <script type="text/javascript" src="../../js/plugin/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="../../js/plugin/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common/calendar.js"></script>
+	<script type="text/javascript" src="../../js/common/ux_common.js"></script>
+
+
+</head>
+<body>
+	<div class="wrapper">
+		<nav>
+			<div class="side-box">
+				<h1><a href="index.html"><img src="../../img/logo/daeyeong.png"></a></h1>
+				<ul class="first-depth">
+					<li class="system">
+						<span class="ico"><img src="../../img/menu_icon/system.png" alt="시스템관리"></span>
+						<div>시스템관리</div>
+					</li>
+					<li class="model">
+						<span class="ico on"><img src="../../img/menu_icon/model.png" alt="제품관리"></span>
+						<div>제품관리</div>
+					</li>
+					<li class="order">
+						<span class="ico"><img src="../../img/menu_icon/order.png" alt="AS접수"></span>
+						<div>A/S접수</div>
+					</li>
+					<li class="account">
+						<span class="ico"><img src="../../img/menu_icon/account.png" alt="정산자료"></span>
+						<div>정산자료</div>
+					</li>
+					<li class="asetc">
+						<span class="ico"><img src="../../img/menu_icon/asetc.png" alt="AS접수 및 처리"></span>
+						<div>A/S접수 및 처리</div>
+					</li>
+					<li class="report">
+						<span class="ico"><img src="../../img/menu_icon/report.png" alt="통계분석"></span>
+						<div>통계분석</div>
+					</li>
+				</ul>
+				<div class="account-box">
+					<div class="ico"><img src="../../img/icon/account_btn_thumb.png" alt="계정관리"></div>
+					<ul>
+						<li><span>암호변경</span></li>
+						<li><span>로그아웃</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="second-depth system">
+				<div class="menu-title">시스템관리</div>
+				<ul>
+					<li><a href="../../html/system/notice_list.html">공지사항</a></li>
+					<li><a href="../../html/system/cm_code_list.html">공통코드관리</a></li>
+					<li><a href="../../html/system/vendor_list.html">거래처관리</a></li>
+					<li><a href="../../html/system/hr_staff_list.html">직원관리</a></li>
+					<li><a href="../../html/system/area_code_list.html">지역코드관리</a></li>
+					<li><a href="../../html/system/holiday.html">휴일일정관리</a></li>
+					<li><a href="../../html/system/area_div.html">서비스맨 지역분할</a></li>
+					<li><a href="../../html/system/menu_info_list.html">메뉴관리</a></li>
+					<li><a href="../../html/system/auth_info_list.html">권한관리</a></li>
+					<li><a href="../../html/system/dep_info_list.html">부서관리</a></li>
+				</ul>
+			</div>
+			<div class="second-depth model">
+				<div class="menu-title">제품관리</div>
+				<ul>
+                    <li><a href="../../html/model/part_info.html">부품정보관리</a></li>
+                    <li><a href="../../html/model/product_info.html">제품그룹관리</a></li>
+                    <li class="on"><a href="../../html/model/model_info.html">모델정보관리</a></li>
+					<li><a href="../../html/model/bad_info.html">불량증상,부위,원인 관리</a></li>
+				</ul>
+			</div>
+			<div class="second-depth order">
+				<div class="menu-title">A/S접수</div>
+				<ul>
+					<li><a href="../../html/order/customer_info.html">고객등록</a></li>
+					<li><a href="../../html/order/order_info.html">A/S 접수등록</a></li>
+					<li><a href="../../html/order/as_batch_process.html">A/S 일괄처리</a></li>
+					<li><a href="../../html/order/part_sales_order.html">부품판매 접수등록</a></li>
+					<li><a href="../../html/order/happycall.html">해피콜 서비스</a></li>
+					<li><a href="../../html/order/as_disposal_list.html">A/S 처리결과 조회</a></li>
+					<li><a href="../../html/order/sales_deposit_send.html">부품판매 입금확인 및 발송관리</a></li>
+					<li><a href="../../html/order/push_list.html">독촉현황</a></li>
+					<li><a href="../../html/order/part_sales_list.html">부품판매 현황</a></li>
+					<li><a href="../../html/order/manage_area_list.html">서비스맨 별 관리지역 현황</a></li>
+					<li><a href="../../html/order/sms_info.html">SMS/MMS 미전송 현황 관리</a></li>
+					<li><a href="../../html/order/send_email_list.html">견적서 메일발송 현황 관리</a></li>
+				</ul>
+			</div>
+			<div class="second-depth account">
+				<div class="menu-title">정산자료</div>
+				<ul>
+                    <li><a href="../../html/account/total_disposal_list.html">종합처리 현황</a></li>
+                    <li><a href="../../html/account/cost_receivable.html">유료수입금 미수금 관리</a></li>
+                    <li><a href="../../html/account/vendor_pay_status.html">거래처별 지급현황</a></li>
+                    <li><a href="../../html/account/free_charge_return_vendor.html">무상자재 반품대상 관리(업체)</a></li>
+                    <li><a href="../../html/account/free_charge_return_serviceman.html">무상자재 반품대상 관리(서비스맨)</a></li>
+                    <li><a href="../../html/account/agency_list_vendor.html">대행료정산 종합 리스트(업체)</a></li>
+                    <li><a href="../../html/account/agency_list_serviceman.html">대행료정산 종합 리스트(서비스맨)</a></li>
+				</ul>
+			</div>
+			<div class="second-depth asetc">
+				<div class="menu-title">AS접수 및 처리</div>
+				<ul>
+					<li><a href="../../html/asetc/as_receive_etc.html">A/S 접수/처리결과 조회</a></li>
+					<li><a href="../../html/asetc/period_pend_etc.html">처리자별 미결현황</a></li>
+					<li><a href="../../html/asetc/result_etc.html">A/S 처리결과 등록</a></li>
+					<li><a href="../../html/asetc/custhis_etc.html">고객 A/S 접수 이력 조회</a></li>
+				</ul>
+			</div>
+			<div class="second-depth report">
+				<div class="menu-title">통계분석</div>
+				<ul>
+					<li><a href="../../html/report/period_disposal_list.html">기간별 처리현황</a></li>
+					<li><a href="../../html/report/day_order_count_list.html">일자별 접수 및 처리 추이도</a></li>
+					<li><a href="../../html/report/period_pend_list.html">처리자별 미결 현황</a></li>
+					<li><a href="../../html/report/day_disposal_count_list.html">당일처리율 현황</a></li>
+					<li><a href="../../html/report/counsel_disposal_count_list.html">상담처리율 현황</a></li>
+					<li><a href="../../html/report/happy_disposal_count_list.html">해피콜 실시율 현황</a></li>
+					<li><a href="../../html/report/happy_disposal_list.html">해피콜 실시 리스트</a></li>
+					<li><a href="../../html/report/faulty_symptom_count_list.html">불량증상별 처리현황</a></li>
+					<li><a href="../../html/report/faulty_part_count_list.html">불량부위별 처리현황</a></li>
+					<li><a href="../../html/report/faulty_cause_count_list.html">불량원인별 처리현황</a></li>
+					<li><a href="../../html/report/staffImprove_list.html">직원별 만족도/친절도 현황</a></li>
+					<li><a href="../../html/report/staff_policy_list.html">직원별 정책이행도 현황</a></li>
+					<li><a href="../../html/report/re_disposal_list.html">재처리율 현황</a></li>
+					<li><a href="../../html/report/opinion_collect_list.html">고객의견 수렴 현황</a></li>
+					<li><a href="../../html/report/service_competition_list.html">서비스 경쟁지수 현황</a></li>
+					<li><a href="../../html/report/area_work_list.html">지역별 업무현황</a></li>
+					<li><a href="../../html/report/serial_no_omission_list.html">제조번호 누락 통계</a></li>
+					<li><a href="../../html/report/work_disposal_list.html">상황담당 업무처리 현황</a></li>
+					<li><a href="../../html/report/production_disposal_list.html">생산기준 처리현황</a></li>
+					<li><a href="../../html/report/lead_time_list.html">처리완료 소요시간 현황</a></li>
+					<li><a href="../../html/report/hourly_process_list.html">시간대별 접수/처리 현황</a></li>
+					<li><a href="../../html/report/period_service_list.html">사용기간별 서비스 발생현황</a></li>
+					<li><a href="../../html/report/free_charge_return_serviceman_status_list.html">무상재재 반품 현황(서비스맨)</a></li>
+				</ul>
+			</div>
+		</nav>
+		<header>
+			<div class="wrap">
+				<ul class="_breadCrumb">
+					<li><a href="#">제품관리</a></li>
+					<li><a href="../../html/model/part_info.html">모델정보관리</a></li>
+				</ul>
+                <button class="_btn blue small surface _actPOP"><span class="modelInfoSave">등록</span></button>
+			</div>
+		</header>
+		<section>
+            <ul class="_searchGroup">
+				<li>
+					<div class="tit">모델코드</div>
+					<input type="text" class="basic" placeholder="입력하세요.">
+				</li>
+                <li>
+					<div class="tit">모델명</div>
+					<input type="text" class="basic" placeholder="입력하세요.">
+				</li>
+                <li>
+					<div class="tit">생산업체</div>
+                    <div class="_searchBox">
+                        <input type="text" class="basic" placeholder="검색어 입력"/>
+                        <button class="_actPOP"><span class="multiVendorCalculate"><img src="../../img/icon/icon_search_black.png" alt=""></span></button>
+                    </div>
+				</li>
+                <li>
+					<div class="tit">사용여부</div>
+                    <select class="basic">
+						<option>전체</option>
+					</select>
+				</li>
+                <li>
+					<button class="_btn black small line">조회<img src="../../img/icon/icon_search_black.png" alt="검색"></button>
+				</li>
+			</ul>
+			<div class="container">
+				<div class="_layBoxList">
+                    <div class="_tableLayout">
+                        <div class="top">
+                            <div class="total">총00개</div>
+                            <button class="_btn green small surface"><span>CSV</span><img src="../../img/icon/icon_down_w.png" alt="다운로드"></button>
+                        </div>
+                        <div class="_tableBox headFix _scroll">
+                            <table class="_table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </th>
+                                        <th><p>모델코드</p></th>
+                                        <th><p>제품그룹명</p></th>
+                                        <th><p>소분류명</p></th>
+                                        <th><p>생산업체</p></th>
+                                        <th><p>정산업체</p></th>
+                                        <th><p>보증기간</p></th>
+                                        <th><p>생산년도</p></th>
+                                        <th><p>단종년도</p></th>
+                                        <th><p>비고</p></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="_actOnOff">
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="_check">
+                                                <input type="checkbox">
+                                                <label>체크박스</label>
+                                            </div>
+                                        </td>
+                                        <td><p>LHD-1023LG(S)V01</p></td>
+                                        <td><p>식기건조기</p></td>
+                                        <td><p>단문형</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p>블루닉스</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="c">-</p></td>
+                                        <td><p class="r"></p></td>
+                                    </tr>
+                                </tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bottom">
+                            <button class="_btn black small lightSurface"><span>삭제</span></button>
+                            <div class="_pagination">
+                                <button class="first" disabled><span>처음</span></button>
+                                <button class="prev" disabled><span>이전</span></button>
+                                <button class="on"><span>1</span></button>
+                                <button><span>2</span></button>
+                                <button><span>3</span></button>
+                                <button><span>4</span></button>
+                                <button><span>5</span></button>
+                                <button class="next"><span>다음</span></button>
+                                <button class="last"><span>마지막</span></button>
+                            </div>
+							<select class="basic itemCountSet">
+								<option>30개</option>
+								<option>100개</option>
+								<option>150개</option>
+							</select>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</section>
+	</div>
+    
+
+    <!--모델정보등록-->
+    <div class="_popup modelInfoSave">
+        <div class="popBox _600">
+            <div class="head">
+                <div class="popName">모델정보</div>
+                <button class="_actClose"><img src="../../img/icon/icon_x.png"></button>
+            </div>
+            <div class="popCon">
+                <div class="contentBasic">
+                    <div class="fontHead_B colBlue">LHD-1023LG(S)V01</div>
+                    <table class="_table aligH edit">
+                        <tbody>
+                            <tr>
+                                <th><p>사용여부</p></th>
+                                <td>
+                                    <select class="basic" required>
+                                        <option value="" selected disabled hidden>선택하세요.</option>
+                                        <option>option01</option>
+                                        <option>option02</option>
+                                    </select>    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><p>모델코드</p></th>
+                                <td><input type="text" class="basic" placeholder="입력하세요."></td>
+                            </tr>
+                            <tr>
+                                <th><p>제품그룹명</p></th>
+                                <td>
+                                 
+                                    <div class="_btnSearch unedit">
+                                        <input type="text" class="basic" placeholder="검색하세요" disabled/>
+                                        <button class="_btn black small lightSurface _actPOP">
+                                            <span class="multiProductInfo">검색</span>
+                                            <img src="../../img/icon/icon_search_blue.png" alt="검색">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><p class="unedit">소분류명</p></th>
+                                <td><p></p></td>
+                            </tr>
+                            <tr>
+                                <th><p class="unedit">생산업체</p></th>
+                                <td><p></p></td>
+                            </tr>
+                            <tr>
+                                <th><p>정산업체</p></th>
+                                <td>
+                                    <div class="_btnSearch unedit">
+                                        <input type="text" class="basic" placeholder="검색하세요." disabled/>
+                                        <button class="_btn black small lightSurface _actPOP">
+                                            <span class="multiVendorCalculate">검색</span>
+                                            <img src="../../img/icon/icon_search_blue.png" alt="검색">
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><p>보증기간</p></th>
+                                <td><input type="text" class="basic _calendar reset" required readonly="readonly"/></td>
+                            </tr>
+                            <tr>
+                                <th><p>생산년도</p></th>
+                                <td><input type="text" class="basic _calendar reset" required readonly="readonly"/></td>
+                            </tr>
+                            <tr>
+                                <th><p>단종년도</p></th>
+                                <td><input type="text" class="basic _calendar reset" required readonly="readonly"/></td>
+                            </tr>
+                            <tr>
+                                <th><p>비고</p></th>
+                                <td><input type="text" class="basic" placeholder="입력하세요."></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="_bottomBtnBox">
+                        <button class="_btn ico colRed"><span>모델정보삭제</span><img src="../../img/icon/icon_delete_red.png"></button>
+                        <div class="_btnBox">
+                            <button class="_btn black small lightSurface _actClose"><span>취소</span></button>
+                            <button class="_btn black small surface"><span>저장</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--제품그룹 선택-->
+    <div class="_popup multiProductInfo">
+        <div class="dim"></div>
+        <div class="popBox _800">
+            <div class="head">
+                <div class="popName">제품그룹</div>
+                <button class="_actClose"><img src="../../img/icon/icon_x.png"></button>
+            </div>
+            <div class="popCon">
+                <div class="contentBasic">
+					<div class="_tableLayout">
+						<div class="top">
+							<div class="_searchBox">
+								<input type="text" class="basic" placeholder="검색어 입력"/>
+								<button><span><img src="../../img/icon/icon_search_black.png" alt=""></span></button>
+							</div>
+						</div>
+                        <div class="_tableBox headFix _scroll ">
+                            <table class="_table">
+                                <thead>
+                                    <tr>
+                                        <th><p>대코드 코드</p></th>
+                                        <th><p>대분류명</p></th>
+                                        <th><p>소분류코드</p></th>
+                                        <th><p>소분류명</p></th>
+                                        <th><p>거래처</p></th>
+                                        <th><p>선택</p></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><p>RCH</p></td>
+                                        <td><p>냉동고</p></td>
+                                        <td><p>BDRCH</p></td>
+                                        <td><p>BD</p></td>
+                                        <td><p>씽씽</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+				</div>
+            </div>
+        </div>
+    </div>
+
+     <!--거래처선택-->
+	<div class="_popup multiVendorCalculate" style="display: flex;">
+        <div class="dim"></div>
+		<div class="popBox _600">
+			<div class="head">
+				<div class="popName">거래처선택</div>
+				<button class="_actClose"><img src="../../img/icon/icon_x.png"></button>
+			</div>
+			<div class="popCon">
+				<div class="contentBasic">
+					<div class="_tableLayout">
+						<div class="top">
+							<div class="_searchBox">
+								<input type="text" class="basic" placeholder="검색어 입력"/>
+								<button><span><img src="../../img/icon/icon_search_black.png" alt=""></span></button>
+							</div>
+						</div>
+                        <div class="_tableBox headFix _scroll ">
+                            <table class="_table">
+                                <thead>
+                                    <tr>
+                                        <th><p>코드</p></th>
+                                        <th><p>이름</p></th>
+                                        <th><p>선택</p></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><p class="c">SOM</p></td>
+                                        <td><p>라셀르(기타)</p></td>
+										<td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  
+</body>
+</html>
+
+

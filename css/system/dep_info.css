@@ -1,0 +1,20 @@
+
+._layBoxList { position: relative; } 
+
+.depStructure { position: absolute; left: 0; top: 0;; width: 420px; padding: 20px 24px; height: 100%; border-right: 10px solid var(--color_01); } 
+.depStructure ._structure { height: 100%; overflow: auto; } 
+.depStructure ._structure .folder span:hover { text-decoration: underline; } 
+.depStructure ._structure .folder.on span { color: var(--blue); } 
+.depStructure ._structure .item { cursor: pointer; } 
+.depStructure ._structure .item:hover { text-decoration: underline; } 
+.depStructure ._structure .item.on { color: var(--blue); } 
+.depStructureSet { padding-left: 420px; display: flex; flex-direction: column; gap: 24px; } 
+.depStructureSet > .top { display: flex; justify-content: space-between; align-items: center; border-bottom: var(--basic_line); padding-bottom: 10px; } 
+.depStructureSet .top .depName { display: flex; gap: 10px; flex-wrap: wrap;; } 
+.depStructureSet .top .depName ._textSet div { font:var(--head_B) }
+.depStructureSet .top .depName ._textSet li{display: flex; gap: 10px;}
+.depStructureSet .top .depName .txt { width: 100%; } 
+.depStructureSet .top .depName button { width: 14px; } 
+.depStructure > .folderAdd { width: 100%; height: 30px; background-color: var(--color_02); margin-bottom: 20px; } 
+
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+	<meta name="format-detection" content="telephone=no">
+    <title>컴포넌트</title>
+    
+    <link rel="icon" type="image/x-icon" href="../../img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="../../img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../../img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../../img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../../img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../../img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../../img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../../img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../../img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../../img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+
+
+	<link rel="stylesheet" href="../../css/plugin/jquery-ui.css"/> 
+	<link rel="stylesheet" href="../../css/common/reset.css"/> 
+    <link rel="stylesheet" href="../../css/common/root.css"/> 
+	<link rel="stylesheet" href="../../css/common/font.css"/> 
+    <link rel="stylesheet" href="../../css/common/common.css"/> 
+	<link rel="stylesheet" href="../../css/common/layout.css"/> 
+	<link rel="stylesheet" href="../../css/common/popup.css"/> 
+    
+    <script type="text/javascript" src="../../js/plugin/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../../js/plugin/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common/calendar.js"></script>
+    <script type="text/javascript" src="../../js/common/ux_common.js"></script>
+
+    
+
+</head>
+<body>
+    <div class="_alertPop">
+		<div class="_actdim"></div>
+        <div class="box">
+            <div class="txtBox">
+                <div class="tit">권한 관리 편집화면으로 이동</div>
+                <div class="txt">
+					작성하신 내용이 저장되지 않았습니다.<br/>이동하시겠습니까?<br/><br/>
+                    권한 관리 업무명 편집은<br/> 공통 코드관리 > ID SET NAME : "A00001" 에서<br/>수정가능합니다.
+				</div>
+            </div>
+            <div class="btnBox">
+                <button class="colG _actClose">취소</button>
+                <button class="colB">확인</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="_alertPop">
+		<div class="_dim"></div>
+        <div class="box">
+            <div class="txtBox">
+                <div class="tit colRed">삭제하시겠습니까?</div>
+                <div class="txt colRed">
+					"코드 분류" 삭제 시 <br/>
+					해당 코드 분류의 포함된 모든 코드가 삭제되고,<br/>
+                    복구되지 않습니다.
+				</div>
+            </div>
+            <div class="btnBox">
+                <button class="colG _actClose">취소</button>
+                <button class="colR">삭제</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="_popup">
+        <div class="popBox _600">
+            <div class="head">
+                <div class="popName">팝업이름</div>
+                <button class="_actClose"><img src="../../img/icon/icon_x.png"></button>
+            </div>
+            <div class="popCon">
+                <div class="content">
+                    <div class="_bottomBtnBox">
+                        <button class="_btn ico colRed"><span>코드삭제</span><img src="../../img/icon/icon_delete_red.png"></button>
+                        <div class="_btnBox">
+                            <button class="_btn black small lightSurface _actClose"><span>취소</span></button>
+                            <button class="_btn black small surface"><span>저장</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--우편번호-->
+    <div class="_popup zipCode" style="display: flex;">
+        <div class="_dim"></div>
+        <div class="popBox _600">
+            <div class="head">
+                <div class="popName">우편번호 검색</div>
+                <button class="_actClose"><img src="../../img/icon/icon_x.png"></button>
+            </div>
+            <div class="popCon">
+                <div class="content">
+                    <iframe frameborder="0" title="우편번호 검색 프레임" id="__daum__viewerFrame_1" src="http://postcode.map.daum.net/search?origin=http%3A%2F%2Flocalhost%3A8081&amp;indaum=off&amp;banner=on&amp;ubl=on&amp;mode=transmit&amp;vt=popup&amp;amr=on&amp;amj=on&amp;ani=off&amp;sd=on&amp;fi=on&amp;fc=off&amp;plrg=&amp;plrgt=1.5&amp;hmb=off&amp;heb=off&amp;asea=off&amp;smh=off&amp;zo=on&amp;us=on&amp;msi=10&amp;ahs=off&amp;whas=500&amp;sm=on&amp;a51=off&amp;zn=Y&amp;fullpath=%2Forder%2FcustomerInfo" ></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

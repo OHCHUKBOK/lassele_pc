@@ -1,0 +1,21 @@
+
+.cmCodeDetailLayout { display: flex; gap: 10px; height: 100%; } 
+
+
+/*코드 분류 정보*/
+.cmCodeDetailLayout .cmCodeBox { display: flex; flex-direction: column; gap: 10px; } 
+.cmCodeDetailLayout .cmCodeBox { width:28%; min-width:500px;; } 
+.cmCodeDetailLayout .cmCodeBox .cmCodeInfor { display: flex; flex-direction: column; gap: 10px; } 
+.cmCodeDetailLayout .cmCodeBox .cmCodeInfor .top { display: flex; justify-content: space-between; align-items: center; } 
+.cmCodeDetailLayout .cmCodeBox .cmCodeInfor .top .cmCode { color: var(--blue); font:var(--head_B); } 
+
+/*코드 추가가*/
+.cmCodeDetailLayout .cmCodeBox .cm_codeAdd ._accordion .acoCon ._bottomBtnBox { margin-top: 10px;} 
+
+
+/*코드 상세 리스트*/
+.cmCodeDetailLayout .cmCodeDetailList { flex: 1; } 
+
+
+
+

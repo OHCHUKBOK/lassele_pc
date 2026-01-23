@@ -1,0 +1,7 @@
+
+
+.container { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-start; } 
+.container .productInfo { width: 560px; background-color:#fff; } 
+.container .productInfo th { width: 120px; } 
+.container .subProductInfo { flex:1; } 
+._tableBox.headFix._scroll { max-height: calc(100vh - 240px); } 

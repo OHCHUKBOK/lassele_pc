@@ -1,0 +1,9 @@
+
+.customerDetail { display: flex; gap: 12px; height: 100%; } 
+.customerDetail ._layBoxList.customerInfor { width: 500px; } 
+.customerDetail ._layBoxList.customerInfor ._tableLayout > .btnBox { justify-content: end; } 
+.customerDetail ._layBoxList.customerInfor ._tableLayout .remarks { height: 240px; } 
+.customerDetail ._layBoxList.orderHistory { flex: 1; display: flex; flex-direction: column; gap: 10px; width: calc(100% - 500px); } 
+._tableBox.headFix._scroll p.btn ._btn span{ text-decoration: underline;}
+._table ._btn.orange span{color: var(--orange);}
+._table ._btn.mint span{color: var(--mint);}

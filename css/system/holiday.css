@@ -1,0 +1,11 @@
+
+#calendar { width: 100%; margin: 40px auto; } 
+.toggle-btn { background-color: #def; border: none; border-radius: 4px; padding: 6px 24px; font: var(--body_B); cursor: pointer; margin-bottom: 4px; z-index: 10; position: relative; } 
+.toggle-btn.closed { background-color:var(--red_03); color:var(--red)}
+.fc-daygrid-day-top { display: flex; flex-direction: column; align-items: center; position: relative; } 
+.fc-daygrid-day-frame { cursor: pointer; padding: 10px; } 
+.fc .fc-daygrid-day-top { justify-content: space-between; }
+.fc-h-event { background-color: var(--color_02); color: #fff; border:0; padding: 4px 10px; } 
+.fc-h-event:hover { background-color: var(--color_03); } 
+.fc .fc-highlight { background-color: var(--color_01); } 
+.fc-icon::before { color: #fff; } 

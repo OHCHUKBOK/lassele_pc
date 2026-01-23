@@ -1,0 +1,15 @@
+
+
+.wrapper > section .container { overflow: hidden; } 
+section { height: 100vh; } 
+._tableBox.headFix._scroll { max-height: initial; } 
+.tableToggle { max-width: 120px; } 
+._tableBox ._table input.basic { min-width: initial; } 
+._tableBox ._table input.basic:disabled { background-color:transparent; } 
+._bottomBtnBox { display: none; } 
+
+
+._searchGroup li.returnDateSet { position: relative; } 
+._searchGroup li.returnDateSet .tit { position: absolute; line-height: 32px; left: 0; z-index: 1; bottom: 0;; height: 32px; padding-left: 16px; font-size: 14px; } 
+._searchGroup li.returnDateSet { flex-direction: row; align-items: end;  padding-right: 16px; justify-content: center; }
+._searchGroup li.returnDateSet input { background-color: var(--yellow_03); padding-left: 140px; width: 260px; border-radius: 50px;}

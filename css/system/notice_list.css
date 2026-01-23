@@ -1,0 +1,5 @@
+._table tr ._fileAdd.tableTd{
+    padding-right: 0;
+}
+
+._table tr .tableTd { border-bottom: var(--basic_line); border-left: var(--basic_line); padding: 0 14px; min-height: 32px; } 

@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+	<meta name="format-detection" content="telephone=no">
+    <title>컴포넌트</title>
+    
+    <link rel="icon" type="image/x-icon" href="../../img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="../../img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../../img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../../img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../../img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../../img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../../img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../../img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../../img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../../img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+
+
+    <link rel="stylesheet" href="../../css/plugin/jquery-ui.css"/> 
+    <link rel="stylesheet" href="../../css/common/font.css"/> 
+	<link rel="stylesheet" href="../../css/common/reset.css"/> 
+    <link rel="stylesheet" href="../../css/common/root.css"/> 
+    <link rel="stylesheet" href="../../css/common/common.css"/> 
+    <link rel="stylesheet" href="../../css/common/layout.css"/> 
+    <link rel="stylesheet" href="../../css/common/popup.css"/> 
+    <link rel="stylesheet" href="../../css/common/element.css"/> 
+  
+    <script type="text/javascript" src="../../js/plugin/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../../js/plugin/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common/calendar.js"></script>
+    <script type="text/javascript" src="../../js/common/ux_common.js"></script>
+
+</head>
+
+<body style="background-color: #fff;">
+
+<div class="elementBox">
+
+
+
+<datalist id="email-options">
+  <option value="@gmail.com">
+  <option value="@naver.com">
+  <option value="@daum.net">
+  <option value="@outlook.com">
+</datalist>
+
+<input type="text" list="email-options" class="basic" placeholder="이메일 입력">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <input type="date" class="basic">
+    <input type="search" class="basic">
+   <br/>
+        <div class="_searchBox">
+            <input type="text" class="basic">
+            <button><span><img src="../../img/icon/icon_search_black.png" alt=""></span></button>
+        </div>
+        <br/>
+        
+        <!--검색 - 입력X 연결된 th 비활성화-->
+        <div class="_btnSearch unedit">
+            <input type="search" class="basic " placeholder="검색하세요" disabled/>
+            <button class="_btn black small lightSurface">
+                <span>검색</span>
+                <img src="../../img/icon/icon_search_blue.png" alt="검색">
+            </button>
+        </div>
+<br/>
+        <!--검색 - 입력 O 비연결된 th 비활성화-->
+        <div class="_btnSearch edit">
+            <input type="text" class="basic " placeholder="검색하세요" />
+            <button class="_btn black small lightSurface">
+                <span>검색</span>
+            </button>
+        </div>
+        <br/>
+          <!--우편번호검색-->
+        <div class="_btnSearch">
+            <button class="_btn black small lightSurface"><span>우편번호</span></button>
+            <input type="text" class="basic " placeholder="우편번호를 검색하세요" disabled/>
+        </div>
+        <br/>
+
+         <!--검색 - 입력 O 비연결된 th 비활성화-->
+        <div class="_btnSearch delBtn">
+            <input type="text" class="basic " placeholder="검색하세요" />
+            <button class="_delBtn"><img src="../../img/icon/icon_del_X.png"></button>
+            <button class="_btn black small lightSurface">
+                <span>검색</span>
+            </button>
+        </div>
+        
+   
+
+
+
+
+
+        <ul class="_structure">
+            <li>
+                <div class="folder open">
+                    <button>폴더 열기닫기 버튼</button>
+                    <span>시스템관리</span>
+                </div>
+                <ul>
+                    <li><div class="item">공지사항</div></li>
+                    <li><div class="item">공통코드관리</div></li>
+                    <li><div class="item">거래처관리</div></li>
+                    <li><div class="item">직원관리</div></li>
+                    <li><div class="item">지역코드관리</div></li>
+                    <li><div class="item">휴일일정관리</div></li>
+                    <li><div class="item">서비스맨 지역분할</div></li>
+                    <li><div class="item">메뉴관리</div></li>
+                    <li><div class="item">select</div></li>
+                    <li><div class="item">부서관리</div></li>
+                </ul>
+            </li>
+            <li>
+                <div class="folder">
+                    <button>폴더 열기닫기 버튼</button>
+                    <span>제품관리</span>
+                </div>
+                <ul>
+                    <li><div class="page">불량증상,부위,원인 관리</div></li>
+                    <li><div class="page">모델정보관리</div></li>
+                    <li><div class="page">부품정보관리</div></li>
+                    <li><div class="page">제품그룹관리</div></li>
+                    <li>
+                        <div class="folder">
+                            <button>폴더 열기닫기 버튼</button>
+                            <span>제품관리2222</span>
+                        </div>
+                        <ul>
+                            <li><div class="page">2모델관리</div></li>
+                            <li><div class="page">2부품관리</div></li>
+                            <li><div class="page">2제품관리</div></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="folder">
+                    <button>폴더 열기닫기 버튼</button>
+                    <span>A/S접수</span>
+                </div>
+                <ul>
+                    <li><div class="page">고객등록</div></li>
+                    <li><div class="page">A/S 접수등록</div></li>
+                    <li><div class="page">A/S 일괄처리</div></li>
+                    <li><div class="page">부품판매 접수등록</div></li>
+                    <li><div class="page">해피콜 서비스</div></li>
+                    <li><div class="page">A/S 처리결과 조회</div></li>
+                    <li><div class="page">부품판매 입금확인 및 발송관리</div></li>
+                    <li><div class="page">독촉현황</div></li>
+                    <li><div class="page">부품판매 현황</div></li>
+                    <li><div class="page">서비스맨 별 관리지역 현황</div></li>
+                    <li><div class="page">SMS/MMS 미전송 현황 관리</div></li>
+                    <li><div class="page">견적서 메일발송 현황 관리</div></li>
+                </ul>
+            </li>
+            <li>
+                <div class="folder">
+                    <button>폴더 열기닫기 버튼</button>
+                    <span>정산자료</span>
+                </div>
+                <ul>
+                    <li><div class="page">종합처리현황</div></li>
+                    <li><div class="page">유료수입금 미수금 관리</div></li>
+                    <li><div class="page">무상자재 반품대상 관리(업체)</div></li>
+                    <li><div class="page">무상자재 반품대상 관리(서비스맨)</div></li>
+                    <li><div class="page">대행료정산 종합_list(업체)</div></li>
+                    <li><div class="page">대행료정산 종합_list(서비스맨)</div></li>
+                    <li><div class="page">대영 정산 검증</div></li>
+                    <li><div class="page">접수 월 마감</div></li>
+                </ul>
+                
+            </li>
+            <li>
+                <div class="folder">
+                    <button>폴더 열기닫기 버튼</button>
+                    <span>통계분석</span>
+                </div>
+                <ul>
+                    <li><div class="page">기간별 처리 현황</div></li>
+                    <li><div class="page">일자별접수 및 처리추이도</div></li>
+                    <li><div class="page">처리자별 미결현황</div></li>
+                    <li><div class="page">당일처리율 현황</div></li>
+                    <li><div class="page">상담처리율 현황</div></li>
+                    <li><div class="page">해피콜실시율 현황</div></li>
+                    <li><div class="page">해피콜 실시 _list</div></li>
+                    <li><div class="page">불량원인별 처리현황</div></li>
+                    <li><div class="page">불량부위별 처리현황</div></li>
+                    <li><div class="page">불량증상별 처리현황</div></li>
+                    <li><div class="page">직원별 만족도/친절도 현황</div></li>
+                    <li><div class="page">직원별 정책이행도 현황</div></li>
+                    <li><div class="page">재처리율 현황</div></li>
+                    <li><div class="page">일일업무현황</div></li>
+                    <li><div class="page">고객의견 수렴 현황</div></li>
+                    <li><div class="page">서비스 경쟁지수 현황</div></li>
+                    <li><div class="page">지역별 업무현황</div></li>
+                    <li><div class="page">제조번호 누락 통계</div></li>
+                    <li><div class="page">상황담당 업무처리 현황</div></li>
+                    <li><div class="page">생산기준 처리 현황</div></li>
+                    <li><div class="page">처리완료 소요시간 현황</div></li>
+                    <li><div class="page">시간대별 접수/처리 현황</div></li>
+                    <li><div class="page">사용기간별 서비스 발생현황</div></li>
+                    <li><div class="page">무상자재 반품 현황(서비스맨)</div></li>
+                </ul>
+            </li>
+            <li>
+                <div class="folder">
+                    <button>폴더 열기닫기 버튼</button>
+                    <span>A/S 접수 및 처리</span>
+                </div>
+                <ul>
+                    <li><div class="page">A/S 접수/처리결과 조회</div></li>
+                    <li><div class="page">처리자별 미결현황</div></li>
+                    <li><div class="page">A/S 처리결과 등록</div></li>
+                    <li><div class="page">고객 A/S 접수 이력 조회</div></li>
+                </ul>
+            </li>
+            
+        </ul>
+   
+
+
+
+    <div class="titL">Toast message</div>
+    <!--default/success/failure-->
+   
+    <div class="_toast success on">
+        <div class="ico"><img src="../../img/common/icon_check_w.png"></div>
+        <div class="txt">저장 완료</div>
+    </div>
+    <div class="_toast failure">
+        <div class="ico"><img src="../../img/icon/ico_failure_w.png"></div>
+        <div class="txt">Toast message - failure</div>
+    </div>
+    <div class="_toast default">
+        <div class="ico"><img src="../../img/icon/icon_alarm_w.png"></div>
+        <div class="txt">Toast message - default</div>
+    </div>
+
+
+
+
+    <div class="titL">file</div>
+    <div class="_fileAdd">
+        <input type="file" id="fileInput">
+        <button class="_uploadBtn">파일 선택</button>
+        <div class="fileName"></div>
+        <button class="_delBtn"><img src="../../img/icon/icon_del_X.png"></button>
+    </div>
+
+
+    <div class="titL">accordion</div>
+    <div class="_accordion _actAcco">
+        <div class="acoTitBtn">아코디언 타이틀</div>
+        <div class="acoCon">
+            컨텐츠
+        </div>
+    </div>
+
+
+
+    <div class="titL">Table layout Box</div>
+
+    <div class="_tableLayout">
+        <div class="top">
+            <div class="total">총00개</div>
+            <button class="_btn green small surface"><span>CSV</span><img src="../../img/icon/icon_down_w.png" alt="다운로드"></button>
+        </div>
+        <div class="_tableBox">
+            <table class="_table">
+                <thead>
+                    <tr>
+                        <th><p>NO</p></th>
+                        <th><p>작성자</p></th>
+                        <th><p>공지기간</p></th>
+                        <th><p>제목</p></th>
+                        <th><p>첨부파일</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><p class="c">1</p></td>
+                        <td><p class="c">홍길동</p></td>
+                        <td><p class="c">2025-00-00 ~ 2025-00-00</p></td>
+                        <td><p>제빙기 일반고장 접수시 BS 진행 </p></td>
+                        <td><p>제빙기 일반고장 접수시 BS 진행 (20250214 처리기준).xlsx</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="bottom">
+            <button class="_btn black small lightSurface"><span>삭제</span></button>
+            <div class="_pagination">
+                <button class="first" disabled=""><span>처음</span></button>
+                <button class="prev" disabled=""><span>이전</span></button>
+                <button class="on"><span>1</span></button>
+                <button><span>2</span></button>
+                <button><span>3</span></button>
+                <button><span>4</span></button>
+                <button><span>5</span></button>
+                <button class="next"><span>다음</span></button>
+                <button class="last"><span>마지막</span></button>
+            </div>
+            <select class="basic itemCountSet">
+                <option>30개</option>
+                <option>100개</option>
+                <option>150개</option>
+            </select>
+        </div>
+    </div>
+   
+
+
+        <div class="titL">dotTit</div>
+        <div class="_dotTit">도트제목</div>
+
+        <div class="titL">tooltip</div>
+        <div class="_tooltip">
+            <div class="tooltipBtn">
+                <span>도움말</span>
+                <span><img src="../../img/common/icon_info.png" alt=""></span>
+            </div>
+            <div class="helpText">
+                <div>
+                    무엇을 그들은 구하지 굳세게 발휘하기 이상의 곳으로 사막이다. 
+                    위하여 작고 우리의 것이다. 
+                    온갖 일월과 천지는 있는 청춘 있다,
+                    장식하는 두손을 실현에 부패를 수 때문이다.
+                    이상의 커다란 못할 그리하였는가? 보는 역사를 인생에 
+                    이상을 봄바람이다.
+                </div>
+            </div>
+        </div>
+
+
+        <div class="titL">Table Scroll</div>
+        <div class="_tableBox headFix _scroll " style="height: 200px;">
+            <table class="_table ">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="_check">
+                                <input type="checkbox">
+                                <label>체크박스</label>
+                            </div>
+                        </th>
+                        <th><p>th</p></th>
+                        <th><p>th</p></th>
+                        <th><p>th</p></th>
+                    </tr>
+                </thead>
+                <tbody class="_actOnOff">
+                    <tr>
+                        <td>
+                            <div class="_check">
+                                <input type="checkbox">
+                                <label>체크박스</label>
+                            </div>
+                        </td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="_check">
+                                <input type="checkbox">
+                                <label>체크박스</label>
+                            </div>
+                        </td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="_check">
+                                <input type="checkbox">
+                                <label>체크박스</label>
+                            </div>
+                        </td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="_check">
+                                <input type="checkbox">
+                                <label>체크박스</label>
+                            </div>
+                        </td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="_check">
+                                <input type="checkbox">
+                                <label>체크박스</label>
+                            </div>
+                        </td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="_check">
+                                <input type="checkbox">
+                                <label>체크박스</label>
+                            </div>
+                        </td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="_check">
+                                <input type="checkbox">
+                                <label>체크박스</label>
+                            </div>
+                        </td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="_check">
+                                <input type="checkbox">
+                                <label>체크박스</label>
+                            </div>
+                        </td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="_check">
+                                <input type="checkbox">
+                                <label>체크박스</label>
+                            </div>
+                        </td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="_check">
+                                <input type="checkbox">
+                                <label>체크박스</label>
+                            </div>
+                        </td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="_check">
+                                <input type="checkbox">
+                                <label>체크박스</label>
+                            </div>
+                        </td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                  
+                    
+                </tbody>
+            </table>
+        </div>
+        <br/><br/><br/><br/><br/>
+        <div class="_tableBox leftFix _scroll">
+            <table class="_table">
+                <tbody>
+                    <tr>
+                        <th><p>th</p></th>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                        <td><p>테이블 가로 스크롤 일이삼사오육 칠팔구십</p></td>
+                    </tr>
+                    <tr>
+                        <th><p>th</p></th>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                        <td><p>sss</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="titL">flex</div>
+        <div class="_flex between">
+            <span>왼쪽</span>
+            <span>오른쪽</span>
+        </div>
+        <br/>
+        <div class="_flex column gap_40">
+            <span>위</span>
+            <span>아래순차</span>
+        </div>
+        
+
+        <div class="titL">Text Group</div>
+        <ul class="_textSet">
+            <li><div class="colBlue fontHead_B">2124345</div></li>
+            <li><div>홍길동</div></li>
+            <li><div>미시간닭갈비</div></li>
+            <li><div>02-0000-0000</div></li>
+            <li><div>010-0000-0000</div></li>
+        </ul>
+        <ul class="_lineGroupBox _06"><!--_10-->
+            <li><button class="_btn ico"><span>수정</span><img src="../../img/icon/icon_edit.png" alt=""></button></li>
+            <li><button class="_btn ico colRed"><span>삭제</span><img src="../../img/icon/icon_delete_red.png"></button></li>
+        </ul>
+        <div class="titL">searchBox</div>
+        <ul class="_searchGroup">
+            <li>
+                <div class="tit">정산기간</div>
+                <input type="text" class="basic" placeholder="입력하세요.">
+            </li>
+            <li>
+                <div class="tit">정산기간</div>
+                <div class="periodGroup">
+                    <input type="date" class="basic">
+                    <div>~</div>
+                    <input type="date" class="basic">
+                </div>
+            </li>
+            <li>
+                <div class="tit">정산기간</div>
+                <select class="basic" required>
+                    <option value="" selected>placeholder</option>
+                    <option>option01</option>
+                    <option>option02</option>
+                </select>
+            </li>
+            <li>
+                <div class="tit">정산기간</div>
+                <div class="_checkGroup">
+                    <div class="_check">
+                        <input type="checkbox" checked>
+                        <label class="ico_t">체크박스</label>
+                    </div>
+                    <div class="_check">
+                        <input type="checkbox" >
+                        <label class="ico_t">체크박스</label>
+                    </div>
+                    <div class="_check">
+                        <input type="checkbox" checked disabled>
+                        <label class="ico_t">체크박스</label>
+                    </div>
+                    <div class="_check">
+                        <input type="checkbox" disabled>
+                        <label class="ico_t">체크박스</label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button class="_btn black small line">조회<img src="../../img/icon/icon_search_black.png" alt="검색"></button>
+            </li>
+        </ul>
+        <div class="titL">Form</div>
+        <table class="element">
+            <tr>
+                <th></th>
+                <th class="tit">Default</th>
+                <th class="tit">Disabled</th>
+                <th class="tit">success</th>
+                <th class="tit">error</th>
+            </tr>
+            <tr>
+                <th class="tit">input</th>
+
+                <td>
+                    <input type="text" class="basic" placeholder="입력하세요."/>
+                </td>
+                <td>
+                    <input type="text" class="basic" placeholder="disabled" disabled/>
+                </td>
+                <td>
+                    <input type="text" class="basic" placeholder="readonly" readonly/>
+                </td>
+
+                <td>
+                    <input type="text" class="basic success" value="성공"/>
+                </td>
+                <td>
+                    <input type="text" class="basic failure" value="실패"/>
+                </td>
+            </tr>
+            <tr>
+                <th class="tit">calendar</th>
+                <td>
+                    <input type="date" class="basic">
+                    <input type="date" class="basic">
+                </td>
+                <td>
+                    <input type="text" class="basic _calendar" required readonly="readonly" disabled/>
+                </td>
+                <td>
+                    <div class="periodGroup">
+                        <input type="date" class="basic">
+                        <div>~</div>
+                        <input type="date" class="basic">
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="tit">select</th>
+                <td>
+                    <select class="basic" required>
+                        <option value="" selected disabled hidden>선택하세요.</option>
+                        <option>option01</option>
+                        <option>option02</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="basic" required disabled>
+                        <option value="" selected disabled hidden>placeholder</option>
+                        <option>option01</option>
+                        <option>option02</option>
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="tit">textarea</th>
+                <td>
+                   <textarea class="basic _scroll" placeholder="입력해주세요"></textarea>
+                </td>
+                <td>
+                    <textarea class="basic _scroll" placeholder="입력해주세요"disabled></textarea>
+                 </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <div class="titL">Table</div>
+        <div class="_tableBox">
+            <!--
+                일반 텍스트 :  div
+            -->
+            <table class="_table">
+                <thead>
+                    <tr>
+                        <th><p>th</p></th>
+                        <th><p>th</p></th>
+                        <th><p>th</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>sss</p>
+                        </td>
+                        <td><p class="c">class=C</p></td>
+                        <td><p class="r">class=R</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="_check">
+                                <input type="checkbox" >
+                                <label>체크박스</label>
+                            </div>
+                        </td>
+                        <td><p>sss</p></td>
+                        <td>
+                            
+                            <p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <table class="_table">
+                <thead>
+                    <tr>
+                        <th><p>col</p></th>
+                        <th><p>col</p></th>
+                        <th><p>col</p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="10">
+                            <p class="empty">검색결과가 없습니다.</p>
+                        </td>
+                       
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <table class="_table">
+                <tbody>
+                    <tr>
+                        <th><p>th</p></th>
+                        <td><p>sss</p></td>
+                    </tr>
+                    <tr>
+                        <th><p>th</p></th>
+                        <td><p>sss</p></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <table class="_table aligH">
+                <tbody>
+                    <tr>
+                        <th><p class="edit">th</p></th>
+                        <td><input type="text" class="basic" placeholder="입력하세요."></td>
+                    </tr>
+                    <tr>
+                        <th><p class="edit">th</p></th>
+                        <td><input type="date" class="basic"></td>
+                    </tr>
+                    <tr>
+                        <th><p class="edit">th</p></th>
+                        <td>
+                            <select class="basic" required>
+                                <option value="" selected disabled hidden>placeholder</option>
+                                <option>option01</option>
+                                <option>option02</option>
+                            </select>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><p class="edit">삭제</p></th>
+                        <td><p><button class="_delBtn"><img src="../../img/icon/icon_del_X.png"></button></p></td>
+                    </tr>
+                    <tr>
+                        <th><p class="edit">텍스트 박스</p></th>
+                        <td>
+                            <div class="tableTdTxt">
+                                <span>텍스트1</span>
+                                <span>텍스트2</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><p>수량</p></th>
+                        <td>
+                            <div class="_countBox">
+                                <button><img src="../../img/icon/icon_minus_bl.png" alt=""></button>
+                                <input type="number" value="0">
+                                <button><img src="../../img/icon/icon_plus_bl.png" alt=""></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="titL">breadCrumb</div>
+        <table class="element">
+            <tr>
+                <td>
+                    <ul class="_breadCrumb">
+                        <li><a href="#">시스템관리</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        
+        <div class="titL">Check/Radio</div>
+        <table class="element">
+            <tr>
+                <th class="tit">check</th>
+                <th class="tit">radio</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="_check">
+                        <input type="checkbox" checked>
+                        <label>체크박스</label>
+                    </div>
+                    <div class="_check">
+                        <input type="checkbox" >
+                        <label>체크박스</label>
+                    </div>
+                    <div class="_check">
+                        <input type="checkbox" checked disabled>
+                        <label>체크박스</label>
+                    </div>
+                    <div class="_check">
+                        <input type="checkbox" disabled>
+                        <label>체크박스</label>
+                    </div>
+                </td>
+                <td>
+                  
+                    <div class="_check">
+                        <input type="radio" checked>
+                        <label>라디오</label>
+                    </div>
+                    <div class="_check">
+                        <input type="radio">
+                        <label>라디오</label>
+                    </div>
+                    <div class="_check">
+                        <input type="radio" checked disabled>
+                        <label>라디오</label>
+                    </div>
+                    <div class="_check">
+                        <input type="radio" disabled>
+                        <label>라디오</label>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="_checkGroup">
+                        <div class="_check">
+                            <input type="checkbox" checked>
+                            <label class="ico_t">체크박스</label>
+                        </div>
+                        <div class="_check">
+                            <input type="checkbox" >
+                            <label class="ico_t">체크박스</label>
+                        </div>
+                        <div class="_check">
+                            <input type="checkbox" checked disabled>
+                            <label class="ico_t">체크박스</label>
+                        </div>
+                        <div class="_check">
+                            <input type="checkbox" disabled>
+                            <label class="ico_t">체크박스</label>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="_checkGroup column">
+                        <div class="_check">
+                            <input type="radio" checked>
+                            <label class="ico_t">라디오</label>
+                        </div>
+                        <div class="_check">
+                            <input type="radio" >
+                            <label class="ico_t">라디오</label>
+                        </div>
+                        <div class="_check">
+                            <input type="radio" checked disabled>
+                            <label class="ico_t">라디오</label>
+                        </div>
+                        <div class="_check">
+                            <input type="radio" disabled>
+                            <label class="ico_t">라디오</label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+           
+        </table>
+
+        <div class="titL">Form</div>
+
+        
+        
+        <table class="element">
+            <tr>
+                <th></th>
+                <th class="tit">Default</th>
+                <th class="tit">Disabled</th>
+                <th class="tit">success</th>
+                <th class="tit">error</th>
+             
+            </tr>
+            <tr>
+                <th class="tit">input</th>
+                <td>
+                    <input type="text" class="basic" placeholder="입력하세요."/>
+                </td>
+                <td>
+                    <input type="text" class="basic" placeholder="입력하세요." disabled/>
+                </td>
+                <td>
+                    <input type="text" class="basic success" value="성공"/>
+                </td>
+                <td>
+                    <input type="text" class="basic failure" value="실패"/>
+                </td>
+            </tr>
+            <tr>
+                <th class="tit">calendar</th>
+                <td>
+                    <input type="date" class="basic">
+                    <input type="date" class="basic">
+                </td>
+                <td>
+                    <input type="text" class="basic _calendar" required readonly="readonly" disabled/>
+                </td>
+                <td>
+                    <div class="periodGroup">
+                        <input type="date" class="basic">
+                        <div>~</div>
+                        <input type="date" class="basic">
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="tit">select</th>
+                <td>
+                    <select class="basic" required>
+                        <option value="" selected disabled hidden>placeholder</option>
+                        <option>option01</option>
+                        <option>option02</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="basic" required disabled>
+                        <option value="" selected disabled hidden>placeholder</option>
+                        <option>option01</option>
+                        <option>option02</option>
+                    </select>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th class="tit">textarea</th>
+                <td>
+                   <textarea class="basic _scroll" placeholder="입력해주세요"></textarea>
+                </td>
+                <td>
+                    <textarea class="basic _scroll" placeholder="입력해주세요"disabled></textarea>
+                 </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <div class="titL">Button</div>
+        <table class="element">
+            <tr>
+                <td>
+                    <button class="_btn blue small surface"><span>button</span></button>
+                    <button class="_btn blue small lightSurface"><span>button</span></button>
+                    <button class="_btn blue small line"><span>button</span></button>
+                </td>
+                <td>
+                    <button class="_btn green small surface"><span>button</span></button>
+                    <button class="_btn green small lightSurface"><span>button</span></button>
+                    <button class="_btn green small line"><span>button</span></button>
+                </td>
+                <td>
+                    <button class="_btn yellow small surface"><span>button</span></button>
+                    <button class="_btn yellow small lightSurface"><span>button</span></button>
+                    <button class="_btn yellow small line"><span>button</span></button>
+                </td>
+                <td>
+                    <button class="_btn orange small surface"><span>button</span></button>
+                    <button class="_btn orange small lightSurface"><span>button</span></button>
+                    <button class="_btn orange small line"><span>button</span></button>
+                </td>
+                <td>
+                    <button class="_btn red small surface"><span>button</span></button>
+                    <button class="_btn red small lightSurface"><span>button</span></button>
+                    <button class="_btn red small line"><span>button</span></button>
+                </td>
+                <td>
+                    <button class="_btn black small surface"><span>button</span></button>
+                    <button class="_btn black small lightSurface"><span>button</span></button>
+                    <button class="_btn black small line"><span>button</span></button>
+                </td>
+                <td>
+                    <button class="_btn mint small surface"><span>button</span></button>
+                    <button class="_btn mint small lightSurface"><span>button</span></button>
+                    <button class="_btn mint small line"><span>button</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button disabled class="_btn small surface"><span>disabled</span></button>
+                    <button disabled class="_btn small lightSurface"><span>disabled</span></button>
+                    <button disabled class="_btn small line"><span>disabled</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="_btn black small line"><span>조회</span><img src="../../img/icon/icon_search_black.png" alt="검색"></button>
+                    <button class="_btn green small line"><span>CSV다운로드</span><img src="../../img/icon/icon_upload_g.png" alt="업로드"></button>
+                    <button class="_btn green small surface"><span>CSV</span><img src="../../img/icon/icon_down_w.png" alt="다운로드"></button>
+                    
+                </td>
+                <td>
+                    <button class="_btn ico">
+                        <span>수정</span>
+                        <img src="../../img/icon/icon_edit.png" alt="">
+                    </button>
+                    <button class="_btn ico">
+                        <span>삭제</span>
+                        <img src="../../img/icon/icon_delete.png">
+                    </button>
+                 
+                </td>
+                <td>
+                    <button class="_delBtn"><img src="../../img/icon/icon_del_X.png"></button>
+                </td>
+                <td>
+                    
+                    <p><button class="_btn blue small lightSurface"><span>선택</span></button></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="_switchCheck">
+                        <input type="checkbox" checked>
+                        <label class="toggle"><span></span></label>
+                        <div class="txt">
+                            <div class="on">미사용</div>
+                            <div class="off">사용중</div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+           
+        </table>
+
+        <div class="titL">Tab</div>
+        <table class="element">
+            <tr>
+                <td>
+                    <ul class="_tab line _actOnOff">
+                        <li class="on">line</li>
+                        <li>line</li>
+                        <li>line</li>
+                    </ul>
+                </td>
+                <td> 
+                    <ul class="_tab surface _actOnOff">
+                        <li class="on">surface</li>
+                        <li>surface</li>
+                        <li>surface</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="_tab text _actOnOff">
+                        <li class="on">text Tab_01</li>
+                        <li>text Tab_02</li>
+                        <li>text Tab_03</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <div class="titL">Pagination</div>
+        <table class="element">
+            <tr>
+                <td>
+                    <div class="_pagination">
+                        <button class="first" disabled><span>처음</span></button>
+                        <button class="prev" disabled><span>이전</span></button>
+                        <button class="on"><span>1</span></button>
+                        <button><span>2</span></button>
+                        <button><span>3</span></button>
+                        <button><span>4</span></button>
+                        <button><span>5</span></button>
+                        <button class="next"><span>다음</span></button>
+                        <button class="last"><span>마지막</span></button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+      
+</div><!--elementBox-->
+   <!--
+<div class="loading-wrap">
+    <div class="loading-spinner"></div>
+    <p>데이터를 불러오는 중입니다. 잠시만 기다려주세요.</p>
+</div>
+    -->
+</body>
+</html>
+
+

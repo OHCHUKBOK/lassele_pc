@@ -1,0 +1,5 @@
+section { height: 100vh; } 
+.container { overflow: hidden; } 
+._tableBox.headFix._scroll { max-height: none; } 
+._layBoxList.detail { flex: 1; overflow: hidden; } 
+

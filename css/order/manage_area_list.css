@@ -1,0 +1,10 @@
+
+section { height: 100vh; } 
+.container { display: flex; gap: 12px; overflow: hidden; } 
+.container ._layBoxList { display: flex; flex-direction: column; gap: 10px; overflow: hidden; } 
+.container ._layBoxList .top { display: flex;justify-content: space-between; align-items: center; gap: 10px; } 
+.container ._layBoxList .top ._searchBox { width: 240px; } 
+.container ._layBoxList ._tableBox.headFix._scroll { max-height: initial; } 
+.container .manageTotal { width: 35%; } 
+.container .manageSet { width: 65%; } 
+.container .manageSet ._textSet { height: 32px; } 

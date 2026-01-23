@@ -1,0 +1,20 @@
+._layBoxList { display: flex; position: relative; } 
+
+.folderStructure button.folderAdd { height: 36px; background-color: var(--color_01); width: 100%; } 
+.folderStructure button.folderAdd span { background-image: url(../../img/icon/ico_folder_add.png); background-size: 18px; padding: 0 24px; background-position: left; } 
+.folderStructure { width: 380px; border-right: var(--basic_line); height: 100%; display: flex; gap: 20px;; flex-direction: column; position: absolute; left: 0; top: 0; padding: 20px 24px; } 
+.folderStructure ._structure { height: 100%; overflow: auto;; } 
+.folderStructure ._structure .item { background-image: url(../../img/icon/ico_page.png); background-size: 18px; line-height: 36px; background-position:left; } 
+.folderStructure ._structure .folder button { background-image: url(../../img/icon/ico_folder.png); background-size: 18px; } 
+.folderStructure ._structure .folder.open button { background-image: url(../../img/icon/ico_folder_open.png); background-size: 18px; } 
+.folderStructure ._structure .folder.on button { background-image: url(../../img/icon/ico_folder_on.png); } 
+.folderStructure ._structure .folder.on.open button { background-image: url(../../img/icon/ico_folder_open_on.png); } 
+.folderStructure ._structure .folder.on span { color: var(--blue); } 
+.folderStructure ._structure .folder span:hover { text-decoration: underline; } 
+.menuDetail { padding-left:380px; width: 100%; display: flex; flex-direction: column; gap: 24px; } 
+.menuDetail .top { border-bottom: var(--basic_line); display: flex; justify-content: space-between; padding-bottom: 24px; align-items: center; } 
+.menuDetail .top .folderInfor { display: flex; flex-direction: column; gap: 6px; } 
+.menuDetail .top .folderInfor .folderName { display: flex; align-items: center; } 
+.menuDetail .top .folderInfor .folderName span { font:var(--head_B) } 
+.menuDetail .top .folderInfor .folderName button { width: 32px; height: 32px; padding: 10px; } 
+.menuDetail ._tableBox .menuname { text-decoration: underline; } 

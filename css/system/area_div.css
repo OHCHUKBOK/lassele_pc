@@ -1,0 +1,14 @@
+section { height: 100vh; } 
+.container { display: flex; overflow: hidden; } 
+._layBoxList .top { display: flex; justify-content: space-between; align-items: center; height: 32px; align-items: center; } 
+
+/*지역*/
+.wrapper > section .container ._layBoxList.addrSido { padding-right: 0; } 
+.wrapper > section .container ._layBoxList.addrSigungu { padding-top:62px; padding-left: 10px; min-width: 20%; } 
+
+._layBoxList.distance { flex: 1; } 
+._layBoxList.distance .top { gap: 10px; } 
+._layBoxList.distance .top ._searchBox { margin-right: auto;; } 
+._layBoxList.distance .top .distanceSet { display: flex; align-items: center; gap: 10px; } 
+._layBoxList.distance .codeSet { text-decoration: underline;}
+._layBoxList.Serviceman { border-left: var(--basic_line); min-width: 20%; } 

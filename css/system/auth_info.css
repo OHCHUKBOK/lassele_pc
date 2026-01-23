@@ -1,0 +1,14 @@
+td p.code { text-decoration: underline; cursor: pointer; } 
+
+td .headcount { color: var(--blue); text-decoration: underline; cursor: pointer; } 
+._layBoxList > .top { position: relative; width: 100%; border-bottom: var(--basic_line); display: flex; align-items: center; justify-content: space-between; height: initial; padding-bottom: 20px; } 
+._layBoxList > .top ._tab { position: absolute; left: 50%; transform: translateX(-50%); top: 0; } 
+.authInfoDetailSet ._layBoxList { display: flex; width: 100%; flex-direction: column; } 
+.authInfoDetailSet .setBox { display: flex; flex: 1; } 
+.authInfoDetailSet .setBox .menuList { width:400px; padding: 24px; border-right: var(--basic_line); padding-left: 0; display: flex; flex-direction: column; gap: 10px; } 
+.authInfoDetailSet .setBox .menuList ul { display: flex; flex-direction: column; gap: 6px; } 
+.authInfoDetailSet .setBox .menuList ul li { background-color: var(--color_01); display: flex; align-items: center; justify-content: space-between; height: 52px; cursor: pointer; padding: 0 20px; gap: 20px;; border:1px solid transparent } 
+.authInfoDetailSet .setBox .menuList ul li.on { background-color: #fff; border:1px solid var(--blue) } 
+.authInfoDetailSet .setBox .menuList ul li > .tit { font:var(--body_M); flex: 1; border-right: var(--basic_line); } 
+.authInfoDetailSet .menuDetailSet { padding: 24px; padding-right: 0; flex: 1; } 
+.authInfoDetailUsers .userList { padding-top: 20px; } 

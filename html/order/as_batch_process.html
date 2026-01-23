@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+	<meta name="format-detection" content="telephone=no">
+    <title>대영테크닉스-A/S일괄처리</title>
+
+    <link rel="icon" type="image/x-icon" href="../../img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="../../img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../../img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../../img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../../img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../../img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../../img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../../img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../../img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="../../img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../../img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon/favicon-16x16.png">
+
+
+    <link rel="stylesheet" href="../../css/plugin/jquery-ui.css"/> 
+	<link rel="stylesheet" href="../../css/common/reset.css"/> 
+    <link rel="stylesheet" href="../../css/common/root.css"/> 
+	<link rel="stylesheet" href="../../css/common/font.css"/> 
+    <link rel="stylesheet" href="../../css/common/common.css"/> 
+	<link rel="stylesheet" href="../../css/common/layout.css"/> 
+	<link rel="stylesheet" href="../../css/common/popup.css"/>
+    <link rel="stylesheet" href="../../css/order/order_request.css"/>
+
+    <script type="text/javascript" src="../../js/plugin/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="../../js/plugin/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../js/common/calendar.js"></script>
+	<script type="text/javascript" src="../../js/common/ux_common.js"></script>
+
+
+</head>
+<body>
+	<div class="wrapper">
+		<nav>
+			<div class="side-box">
+				<h1><a href="index.html"><img src="../../img/logo/daeyeong.png"></a></h1>
+				<ul class="first-depth">
+					<li class="system">
+						<span class="ico"><img src="../../img/menu_icon/system.png" alt="시스템관리"></span>
+						<div>시스템관리</div>
+					</li>
+					<li class="model">
+						<span class="ico"><img src="../../img/menu_icon/model.png" alt="제품관리"></span>
+						<div>제품관리</div>
+					</li>
+					<li class="order">
+						<span class="ico"><img src="../../img/menu_icon/order.png" alt="AS접수"></span>
+						<div>A/S접수</div>
+					</li>
+					<li class="account">
+						<span class="ico"><img src="../../img/menu_icon/account.png" alt="정산자료"></span>
+						<div>정산자료</div>
+					</li>
+					<li class="asetc">
+						<span class="ico"><img src="../../img/menu_icon/asetc.png" alt="AS접수 및 처리"></span>
+						<div>A/S접수 및 처리</div>
+					</li>
+					<li class="report">
+						<span class="ico"><img src="../../img/menu_icon/report.png" alt="통계분석"></span>
+						<div>통계분석</div>
+					</li>
+					<li class="partInfo">
+						<span class="ico"><img src="../../img/menu_icon/part_info.png" alt="부품정보관리"></span>
+						<div>부품정보관리</div>
+					</li>
+					<li class="partner">
+						<span class="ico"><img src="../../img/menu_icon/partner.png" alt="협력업체 자재관리"></span>
+						<div>협력업체 자재관리</div>
+					</li>
+					<li class="stats">
+						<span class="ico"><img src="../../img/menu_icon/stats.png" alt="부품통계관리"></span>
+						<div>부품통계관리</div>
+					</li>
+					<li class="stock_check">
+						<span class="ico"><img src="../../img/menu_icon/stock_check.png" alt="재고조사"></span>
+						<div>재고조사</div>
+					</li>
+					<li class="techdoc">
+						<span class="ico"><img src="../../img/menu_icon/document.png" alt="기술자료"></span>
+						<div>기술자료</div>
+					</li>
+				</ul>
+				<div class="account-box">
+					<div class="ico"><img src="../../img/icon/account_btn_thumb.png" alt="계정관리"></div>
+					<ul>
+						<li><span>암호변경</span></li>
+						<li><span>로그아웃</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="second-depth system">
+				<div class="menu-title">시스템관리</div>
+				<ul>
+					<li><a href="../../html/system/notice_list.html">공지사항</a></li>
+					<li><a href="../../html/system/cm_code_list.html">공통코드관리</a></li>
+					<li><a href="../../html/system/vendor_list.html">거래처관리</a></li>
+					<li><a href="../../html/system/hr_staff_list.html">직원관리</a></li>
+					<li><a href="../../html/system/area_code_list.html">지역코드관리</a></li>
+					<li><a href="../../html/system/holiday.html">휴일일정관리</a></li>
+					<li><a href="../../html/system/area_div.html">서비스맨 지역분할</a></li>
+					<li><a href="../../html/system/menu_info_list.html">메뉴관리</a></li>
+					<li><a href="../../html/system/auth_info_list.html">권한관리</a></li>
+					<li><a href="../../html/system/dep_info_list.html">부서관리</a></li>
+				</ul>
+			</div>
+			<div class="second-depth model">
+				<div class="menu-title">제품관리</div>
+				<ul>
+                    <li><a href="../../html/model/part_info.html">부품정보관리</a></li>
+                    <li><a href="../../html/model/product_info.html">제품그룹관리</a></li>
+                    <li><a href="../../html/model/model_info.html">모델정보관리</a></li>
+					<li><a href="../../html/model/bad_info.html">불량증상,부위,원인 관리</a></li>
+				</ul>
+			</div>
+			<div class="second-depth order">
+				<div class="menu-title">A/S접수</div>
+				<ul>
+					<li><a href="../../html/order/customer_info.html">고객등록</a></li>
+					<li><a href="../../html/order/order_info.html">A/S 접수등록</a></li>
+					<li class="on"><a href="../../html/order/as_batch_process.html">A/S 일괄처리</a></li>
+					<li><a href="../../html/order/part_sales_order.html">부품판매 접수등록</a></li>
+					<li><a href="../../html/order/happycall.html">해피콜 서비스</a></li>
+					<li><a href="../../html/order/AsDisposal_list.html">A/S 처리결과 조회</a></li>
+					<li><a href="../../html/order/SalesDepositSend.html">부품판매 입금확인 및 발송관리</a></li>
+					<li><a href="../../html/order/push_list.html">독촉현황</a></li>
+					<li><a href="../../html/order/part_sales_list.html">부품판매 현황</a></li>
+					<li><a href="../../html/order/manage_area_list.html">서비스맨 별 관리지역 현황</a></li>
+					<li><a href="../../html/order/sms_info.html">SMS/MMS 미전송 현황 관리</a></li>
+					<li><a href="../../html/order/send_email_list.html">견적서 메일발송 현황 관리</a></li>
+				</ul>
+			</div>
+			<div class="second-depth account">
+				<div class="menu-title">정산자료</div>
+				<ul>
+					<li><a href="../../html/account/total_disposal_list.html">종합처리현황</a></li>
+					<li><a href="../../html/account/cost_receivable.html">유료수입금 미수금 관리</a></li>
+					<li><a href="../../html/account/free_charge_return_vendor_list.html">무상자재 반품대상 관리(업체)</a></li>
+					<li><a href="../../html/account/free_charge_return_serviceman.html">무상자재 반품대상 관리(서비스맨)</a></li>
+					<li><a href="../../html/account/agency_list_vendor_list.html">대행료정산 종합_list(업체)</a></li>
+					<li><a href="../../html/account/agency_list_serviceman.html">대행료정산 종합_list(서비스맨)</a></li>
+					<li><a href="../../html/account/agency_list_dye.html">대영 정산 검증</a></li>
+					<li><a href="../../html/account/vendor_order_close.html">접수 월 마감</a></li>
+
+				</ul>
+			</div>
+			<div class="second-depth asetc">
+				<div class="menu-title">AS접수 및 처리</div>
+				<ul>
+					<li><a href="../../html/asetc/as_receive_etc.html">A/S 접수/처리결과 조회</a></li>
+					<li><a href="../../html/asetc/period_pend_etc.html">처리자별 미결현황</a></li>
+					<li><a href="../../html/asetc/result_etc.html">A/S 처리결과 등록</a></li>
+					<li><a href="../../html/asetc/custhis_etc.html">고객 A/S 접수 이력 조회</a></li>
+				</ul>
+			</div>
+			<div class="second-depth report">
+				<div class="menu-title">통계분석</div>
+				<ul>
+					<li><a href="../../html/report/period_disposal_list.html">기간별 처리 현황</a></li>
+					<li><a href="../../html/report/day_order_count.html">일자별접수 및 처리추이도</a></li>
+					<li><a href="../../html/report/period_pend_etc.html">처리자별 미결현황</a></li>
+					<li><a href="../../html/report/day_disposal_count_list.html">당일처리율 현황</a></li>
+					<li><a href="../../html/report/counsel_disposal_count.html">상담처리율 현황</a></li>
+					<li><a href="../../html/report/happy_disposal_count.html">해피콜실시율 현황</a></li>
+					<li><a href="../../html/report/happy_disposal_list.html">해피콜 실시 _list</a></li>
+					<li><a href="../../html/report/faulty_cause_count.html">불량원인별 처리현황</a></li>
+					<li><a href="../../html/report/faulty_part_count.html">불량부위별 처리현황</a></li>
+					<li><a href="../../html/report/faulty_symptom_count.html">불량증상별 처리현황</a></li>
+					<li><a href="../../html/report/staffImprove_list.html">직원별 만족도/친절도 현황</a></li>
+					<li><a href="../../html/report/staffpolicy_list.html">직원별 정책이행도 현황</a></li>
+					<li><a href="../../html/report/re_disposal_list.html">재처리율 현황</a></li>
+					<li><a href="../../html/report/day_work_list.html">일일업무현황</a></li>
+					<li><a href="../../html/report/opinion_collect_list.html">고객의견 수렴 현황</a></li>
+					<li><a href="../../html/report/service_competition_list.html">서비스 경쟁지수 현황</a></li>
+					<li><a href="../../html/report/area_work_list.html">지역별 업무현황</a></li>
+					<li><a href="../../html/report/serial_no_omission.html">제조번호 누락 통계</a></li>
+					<li><a href="../../html/report/WorkDisposal_list.html">상황담당 업무처리 현황</a></li>
+					<li><a href="../../html/report/production_disposal_list.html">생산기준 처리 현황</a></li>
+					<li><a href="../../html/report/lead_time_list.html">처리완료 소요시간 현황</a></li>
+					<li><a href="../../html/report/hourly_process_list.html">시간대별 접수/처리 현황</a></li>
+					<li><a href="../../html/report/period_service_list.html">사용기간별 서비스 발생현황</a></li>
+					<li><a href="../../html/report/free_charge_return_serviceman_status.html">무상자재 반품 현황(서비스맨)</a></li>
+				</ul>
+			</div>
+		</nav>
+		<header>
+			<div class="wrap">
+				<ul class="_breadCrumb">
+					<li><a href="#">A/S접수</a></li>
+					<li><a href="../../html/order/as_batch_process.html">A/S일괄 접수</a></li>
+				</ul>
+                <div class="_flex gap_20 headSearch">
+                    <div class="_btnSearch unedit">
+                        <input type="text" class="basic" placeholder="접수건 검색" autofocus/>
+                        <button class="_btn black small lightSurface _actPOP">
+                            <span class="agentInfoAs">검색</span>
+                            <img src="../../img/icon/icon_search_blue.png" alt="검색">
+                        </button>
+                    </div>
+                </div>
+               <button class="_btn orange small lightSurface _actPOP"><span class="orderInfoSave">A/S접수</span></button>
+			</div>
+		</header>
+		<section>
+			<div class="container">
+                <div class="customerBox">
+                    <div class="_layBox customerInfo">
+                        <div class="fontHead_B">고객정보</div>
+                        <!--
+                        <div class="sectionEmpty">접수건을 조회해주세요.</div>
+                        -->
+                        <table class="_table aligH">
+                            <tbody>
+                                <tr>
+                                    <th><p>고객명</p></th>
+                                    <td><p>홍길동</p></td>
+                                </tr>
+                                <tr>
+                                    <th><p>상호</p></th>
+                                    <td><p>태마루</p></td>
+                                </tr>
+                                <tr>
+                                    <th><p>고객유형</p></th>
+                                    <td><p>업소</p></td>
+                                </tr>
+                                <tr>
+                                    <th><p>지번주소</p></th>
+                                    <td><p>0000-0000 충청남도 서산시 대산읍 화곡리 개화2길 3-6</p></td>
+                                </tr>
+                                <tr>
+                                    <th><p>도로명주소</p></th>
+                                    <td><p>0000-0000 충청남도 서산시 대산읍 화곡리 개화2길 3-6</p></td>
+                                </tr>
+                                <tr>
+                                    <th><p>특이사항</p></th>
+                                    <td><p></p></td>
+                                </tr>
+                                <tr>
+                                    <th><p>전화번호</p></th>
+                                    <td><p>02-0000-0000</p></td>
+                                </tr>
+                                <tr>
+                                    <th><p>H/P번호</p></th>
+                                    <td><p>010-0000-0000</p></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="hisrotyBox ongoingList">
+                        <div class="fontHead_B">수리이력</div>
+                        <!--
+                        <div class="sectionEmpty">접수건을 조회해주세요.</div>
+                        <div class="sectionEmpty">진행중인 수리이력이 없습니다.</div>
+                        -->
+                        <ul class="_actOnOff list">
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div class="colBlue fontHead_B">수리 진행중</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div>수리완료</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div>수리완료</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div class="colBlue fontHead_B">수리 진행중</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div>수리완료</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div class="colBlue fontHead_B">수리 진행중</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div>수리완료</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div class="colBlue fontHead_B">수리 진행중</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div>수리완료</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div class="colBlue fontHead_B">수리 진행중</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div>수리완료</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div class="colBlue fontHead_B">수리 진행중</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div>수리완료</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div class="colBlue fontHead_B">수리 진행중</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div>수리완료</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div class="colBlue fontHead_B">수리 진행중</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div>수리완료</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div class="colBlue fontHead_B">수리 진행중</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                            <li>
+                                <ul class="_textSet">
+                                    <li><div class="colBlue">2124345</div></li>
+                                    <li><div>2025-00-00 00:00:00</div></li>
+                                    <li><div>수리완료</div></li>
+                                </ul>
+                                <ul class="_textSet">
+                                    <li><div class="fontHead_B">LMD-1703H</div></li>
+                                    <li><div>다목적(냉)건조기</div></li>
+                                    <li><div>블루닉스</div></li>
+                                </ul>
+                                <div class="fontBody_R">3실 작동불/모델명 확인필요</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="receptionDetail _layBoxList asInfor">
+                    <!--
+                    <div class="sectionEmpty">접수건을 조회해주세요.</div>
+                    -->
+                    <div class="_formGroup">
+                        <div class="_tableLayout">
+                            <div class="_flex between">
+                                <div class="_dotTit">접수정보</div>
+                                <div class="_flex between alignC gap_16">
+                                    <div class="fontBody_R">독촉횟수 : 0회</div>
+                                    <button class="_btn red s_small lightSurface"><span>독촉</span></button>
+                                </div>
+                            </div>
+                           
+                            <table class="_table aligH edit">
+                                <tbody>
+                                    <tr>
+                                        <th colspan="4">
+                                            <ul class="_textSet">
+                                                <li><div class="colBlue fontBody_B">1931667</div></li>
+                                                <li><div>진행상태 : 완료</div></li>
+                                                <li><div>태마루 접수</div></li>
+                                            </ul>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th><p>접수구분</p></th>
+                                        <td>
+                                            <select class="basic" required>
+                                                <option value="" selected disabled hidden>선택하세요.</option>
+                                                <option>option1</option>
+                                                <option>option2</option>
+                                            </select>     
+                                        </td>
+                                        <th><p>접수일자</p></th>
+                                        <td><input type="date" class="basic"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--접수건이 완료인경우 : 서비스맨 배정 항목은 비활성화 처리-->
+                        <div class="_tableLayout">
+                            <div class="_dotTit">서비스맨 배정</div>
+                            <table class="_table aligH edit">
+                                <tbody>
+                                    <tr>
+                                        <th rowspan="2"><p>서비스맨</p></th>
+                                        <td colspan="3">
+                                            <div class="_btnSearch unedit">
+                                                <input type="text" class="basic" placeholder="검색하세요" disabled/>
+                                                <button class="_btn black small lightSurface _actPOP">
+                                                    <span class="hrStaffList">검색</span>
+                                                    <img src="../../img/icon/icon_search_blue.png" alt="검색">
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><p class="btn"><button class="_btn blue small line _actPOP"><span class="servicemanProgress">서비스맨 진행 접수 확인</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>약속일</p></th>
+                                        <td><input type="text" class="basic _calendar reserve" required readonly="readonly"/></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <th><p>시간</p></th>
+                                        <td>
+                                            <select class="basic" required>
+                                                <option value="" selected disabled hidden>--:--</option>
+                                                <option>08:00</option>
+                                                <option>08:30</option>
+                                            </select>    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>SMS 송신</p></th>
+                                        <td>
+                                            <div class="_checkGroup">
+                                                <div class="_check">
+                                                    <input type="checkbox" checked>
+                                                    <label class="ico_t">서비스맨</label>
+                                                </div>
+                                                <div class="_check">
+                                                    <input type="checkbox" >
+                                                    <label class="ico_t">고객</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="_tableLayout">
+                            <div class="_dotTit">처리정보</div>
+                            <table class="_table aligH edit">
+                                <tbody>
+                                    <tr>
+                                        <th colspan="4">
+                                            <p class="unedit">처리일자 : 2025-00-00</p>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th><p>처리자</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic" value="홍길동"placeholder="검색하세요"/>
+                                                <button class="_btn black small lightSurface _actPOP"><span class="hrStaffList">검색</span></button>
+                                            </div>   
+                                        </td>
+                                        <th><p>처리자2</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic" placeholder="검색하세요"/>
+                                                <button class="_btn black small lightSurface _actPOP"><span class="hrStaffList">검색</span></button>
+                                            </div>   
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>처리내용</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic " placeholder="검색하세요" disabled/>
+                                                <button class="_btn black small lightSurface _actPOP">
+                                                    <span class="singleDisposalClass">검색</span>
+                                                    <img src="../../img/icon/icon_search_blue.png" alt="검색">
+                                                </button>
+                                            </div>  
+                                        </td>
+                                        <th><p>처리내용2</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic " placeholder="검색하세요" disabled/>
+                                                <button class="_btn black small lightSurface _actPOP">
+                                                    <span class="singleDisposalClass">검색</span>
+                                                    <img src="../../img/icon/icon_search_blue.png" alt="검색">
+                                                </button>
+                                            </div>  
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="_tableLayout">
+                            <div class="_dotTit">제품정보</div>
+                            <table class="_table aligH edit">
+                                <tbody>
+                                    <tr>
+                                        <th><p>모델명</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic" placeholder="모델선택"/>
+                                                <button class="_btn black small lightSurface _actPOP"><span class="singleModel">검색</span></button>
+                                            </div>
+                                        </td>
+                                        <th><p>구입년월</p></th>
+                                        <td><input type="month" class="basic" placeholder="년도"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>제품소분류</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic" disabled/>
+                                            </div>
+                                        </td>
+                                        <th><p>제조년월</p></th>
+                                        <td><input type="month" class="basic" placeholder="년도"/></td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>업체명</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic" disabled/>
+                                            </div>
+                                        </td>
+                                        <th><p>제조번호상태</p></th>
+                                        <td>
+                                            <select class="basic" required>
+                                                <option value="" selected disabled hidden>선택하세요.</option>
+                                                <option>option1</option>
+                                                <option>option2</option>
+                                            </select>  
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>서비스유형</p></th>
+                                        <td><p></p></td>
+                                        
+                                        <th><p>제조번호</p></th>
+                                        <td>
+                                            <input type="text" class="basic" placeholder="입력하세요."/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>보증구분</p></th>
+                                        <td colspan="4">
+                                            <select class="basic" required>
+                                                <option value="" selected disabled hidden>선택하세요.</option>
+                                                <option>option1</option>
+                                                <option>option2</option>
+                                            </select>  
+                                        </td>
+                                       
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="_tableLayout">
+                            <div class="_dotTit">증상정보</div>
+                            <table class="_table aligH edit">
+                                <tbody>
+                                    <tr>
+                                        <th><p>불량증상</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic " placeholder="검색하세요" disabled/>
+                                                <button class="_btn black small lightSurface _actPOP">
+                                                    <span class="singleFaultyPart">검색</span>
+                                                    <img src="../../img/icon/icon_search_blue.png" alt="검색">
+                                                </button>
+                                            </div>  
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>불량부위</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic" disabled/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>불량원인</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic " placeholder="검색하세요" disabled/>
+                                                <button class="_btn black small lightSurface _actPOP">
+                                                    <span class="singleFaultyCause">검색</span>
+                                                    <img src="../../img/icon/icon_search_blue.png" alt="검색">
+                                                </button>
+                                            </div>  
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="_tableLayout">
+                            <div class="switchTit">
+                                <div class="tit">자제사용</div>
+                                <div class="_switchCheck">
+                                    <input type="checkbox" >
+                                    <label class="toggle"><span></span></label>
+                                    <div class="txt">
+                                        <div class="on">사용</div>
+                                        <div class="off">미사용</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--미사용 체크 시 아래 _table bottom hidden-->
+                            <table class="_table aligH edit">
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="4" class="del"><p class="c"><button class="_delBtn"><img src="../../img/icon/icon_del_X.png"></button></p></td>
+                                        <th><p>부품ID</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic " placeholder="검색하세요" disabled/>
+                                                <button class="_btn black small lightSurface _actPOP">
+                                                    <span class="partList">검색</span>
+                                                    <img src="../../img/icon/icon_search_blue.png" alt="검색">
+                                                </button>
+                                            </div>  
+                                        </td>
+                                        <th><p>유/뮤상여부</p></th>
+                                        <td>
+                                            <select class="basic" required>
+                                                <option value="" selected disabled hidden>선택하세요.</option>
+                                                <option>option1</option>
+                                                <option>option2</option>
+                                            </select>  
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr>
+                                        <th><p>품명</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic" disabled/>
+                                            </div>
+                                        </td>
+                                        <th><p>제품수량</p></th>
+                                        <td>
+                                            <div class="_countBox">
+                                                <button><img src="../../img/icon/icon_minus_bl.png" alt=""></button>
+                                                <input type="number" value="0">
+                                                <button><img src="../../img/icon/icon_plus_bl.png" alt=""></button>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <th><p>규격</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic" disabled/>
+                                            </div>
+                                        </td>
+                                        <th><p>소비자단가</p></th>
+                                        <td><p class="r">50,000</p></td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                            <table class="_table aligH edit">
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="4" class="del"><p class="c"><button class="_delBtn"><img src="../../img/icon/icon_del_X.png"></button></p></td>
+                                        <th><p>부품ID</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic " placeholder="검색하세요" disabled/>
+                                                <button class="_btn black small lightSurface _actPOP">
+                                                    <span class="partList">검색</span>
+                                                    <img src="../../img/icon/icon_search_blue.png" alt="검색">
+                                                </button>
+                                            </div>  
+                                        </td>
+                                        <th><p>유/뮤상여부</p></th>
+                                        <td>
+                                            <select class="basic" required>
+                                                <option value="" selected disabled hidden>선택하세요.</option>
+                                                <option>option1</option>
+                                                <option>option2</option>
+                                            </select>  
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>품명</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic" disabled/>
+                                            </div>
+                                        </td>
+                                        <th><p>제품수량</p></th>
+                                        <td>
+                                            <div class="_countBox">
+                                                <button><img src="../../img/icon/icon_minus_bl.png" alt=""></button>
+                                                <input type="number" value="0">
+                                                <button><img src="../../img/icon/icon_plus_bl.png" alt=""></button>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <th><p>규격</p></th>
+                                        <td>
+                                            <div class="_btnSearch">
+                                                <input type="text" class="basic" disabled/>
+                                            </div>
+                                        </td>
+                                        <th><p>소비자단가</p></th>
+                                        <td><p class="r">50,000</p></td>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+                        <!--<div class="empty">부품을 추가해주세요</div>-->
+                            <div class="bottom _flex alignC between">
+                                <button class="_btn mint small line _actPOP"><span class="partList">부품추가</span></button>
+                                <div class="total">총부품료 : <span>0원</span></div>
+                            </div>
+                        </div>
+                        <div class="_tableLayout">
+                            <div class="switchTit">
+                                <div class="tit">사진첨부</div>
+                                <div class="_switchCheck">
+                                    <input type="checkbox" >
+                                    <label class="toggle"><span></span></label>
+                                    <div class="txt">
+                                        <div class="on">사용</div>
+                                        <div class="off">미사용</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 스위치 버튼 체크시 show -->
+                            <div class="_imgUploadBox _actImgEnlarge">
+                                <button class="_btn blue small lightSurface imgAddBtn"><span>사진첨부</span></button>
+                                <input type="file" multiple>
+                                <div class="previewImgBox">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="_tableLayout">
+                            <div class="switchTit">
+                                <div class="tit">유/무상</div>
+                                <div class="_switchCheck">
+                                    <input type="checkbox" checked>
+                                    <label class="toggle"><span></span></label>
+                                    <div class="txt">
+                                        <div class="on">유상</div>
+                                        <div class="off">무상</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--무상 체크 시 - 유상금액 비활성화 + 금액삭제-->
+                            <table class="_table aligH edit">
+                                <tbody>
+                                    <tr>
+                                        <td colspan="10">
+                                            <p class="txt r">총 부품료 : 90,000  +  기술료 : 200,000</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>결제구분</p></th>
+                                        <td>
+                                            <select class="basic" required>
+                                                <option value="" selected disabled hidden>선택하세요.</option>
+                                                <option>option1</option>
+                                                <option>option2</option>
+                                            </select>  
+                                        </td>
+                                        <th><p>장거리</p></th>
+                                        <td><input type="text" class="basic r"/></td>
+                                        <th><p>추가비용</p></th>
+                                        <td><input type="text" class="basic r"/></td>
+                                        
+                                        <th><p>유상금액</p></th>
+                                        <td>
+                                            <div class="totalInput">
+                                                <input type="text" class="basic total " value="290,000"/>
+                                                <!--유상- 총 부품료보다 총금액이 작은경우-->
+                                                <div>유상금액을 부품료보다 크게 입력하세요</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                           
+                        </div>
+                        <div class="_tableLayout">
+                            <div class="_dotTit">특이사항</div>
+                            <textarea class="basic _scroll remarks" placeholder="입력해주세요"></textarea>
+                        </div>
+                    </div>
+                    <div class="_bottomBtnBox">
+                        <div class="_btnBox">
+                            <button class="_btn black small surface"><span>저장</span></button>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</section>
+	</div>
+    
+    <!--불량증상 및 부위 - 단일선택-->
+    <div class="_popup singleFaultyPart">
+        <div class="popBox _700">
+            <div class="head">
+                <div class="popName">불량증상 및 부위</div>
+                <button class="_actClose"><img src="../../img/icon/icon_x.png"></button>
+            </div>
+            <div class="popCon">
+                <div class="content">
+                    <div class="_tableBox headFix _scroll topLevel">
+                        <table class="_table">
+                            <thead>
+                                <tr>
+                                    <th><p>제품명</p></th>
+                                </tr>
+                            </thead>
+                            <tbody class="_actOnOff">
+                                <tr>
+                                    <td><p>간냉식에바결빙</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>간냉식에바결빙</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                               
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>간냉식에바결빙</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>간냉식에바결빙</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p>OEM 쇼케이스</p></td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="set">
+                        <div class="_searchBox">
+                            <input type="text" class="basic" placeholder="검색어 입력">
+                            <button><span><img src="../../img/icon/icon_search_black.png" alt=""></span></button>
+                        </div>
+                        <div class="_tableBox headFix _scroll">
+                            <table class="_table">
+                                <thead>
+                                    <tr>
+                                        <th><p>불량부위</p></th>
+                                        <th><p>선택</p></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>MAIN PCB</p></td>
+                                        <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!--불량원인 선택 - 단일선택-->
+     <div class="_popup singleFaultyCause">
+        <div class="popBox _700">
+            <div class="head">
+                <div class="popName">불량원인</div>
+                <button class="_actClose"><img src="../../img/icon/icon_x.png"></button>
+            </div>
+            <div class="popCon">
+                <div class="contentBasic">
+                    <div class="_searchBox">
+                        <input type="text" class="basic" placeholder="검색어 입력">
+                        <button><span><img src="../../img/icon/icon_search_black.png" alt=""></span></button>
+                    </div>
+                    <div class="_tableBox headFix _scroll">
+                        <table class="_table">
+                            <thead>
+                                <tr>
+                                    <th><p>불량원인코드</p></th>
+                                    <th><p>불량원인코드</p></th>
+                                    <th><p>불량원인</p></th>
+                                    <th><p>선택</p></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p>A10</p></td>
+                                    <td><p>제품원인</p></td>
+                                    <td><p>단선</p></td>
+                                    <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--처리유형 - 단일선택-->
+	<div class="_popup singleDisposalClass">
+		<div class="popBox _700">
+			<div class="head">
+				<div class="popName">처리유형</div>
+				<button class="_actClose"><img src="../../img/icon/icon_x.png"></button>
+			</div>
+			<div class="popCon">
+				<div class="contentBasic">
+                    <div class="_searchBox">
+                        <input type="text" class="basic" placeholder="검색어 입력"/>
+                        <button><span><img src="../../img/icon/icon_search_black.png" alt=""></span></button>
+                    </div>
+                    <div class="_tableBox headFix _scroll">
+                        <table class="_table">
+                            <thead>
+                                <tr>
+                                    <th><p>CODE</p></th>
+                                    <th><p>이름</p></th>
+                                    <th><p>결과명</p></th>
+                                    <th><p>선택</p></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p class="c">A</p></td>
+                                    <td><p>수리처리완료</p></td>
+                                    <td><p class="c">완료건</p></td>
+                                    <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="c">A</p></td>
+                                    <td><p>수리처리완료</p></td>
+                                    <td><p class="c">완료건</p></td>
+                                    <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                </tr>
+                                 <tr>
+                                    <td><p class="c">A</p></td>
+                                    <td><p>수리처리완료</p></td>
+                                    <td><p class="c">완료건</p></td>
+                                    <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="c">A</p></td>
+                                    <td><p>수리처리완료</p></td>
+                                    <td><p class="c">완료건</p></td>
+                                    <td><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!--A/S접수검색-->
+    <div class="_popup agentInfoAs">
+        <div class="popBox _1600">
+            <div class="head">
+                <div class="popName">접수건 검색</div>
+                <button class="_actClose"><img src="../../img/icon/icon_x.png"></button>
+            </div>
+            <div class="popCon">
+                <div class="contentBasic">
+                    <ul class="_searchGroup">
+                        <li>
+                            <div class="tit">접수번호</div>
+                            <input type="text" class="basic" placeholder="검색어입력"/>
+                        </li>
+                        <li>
+                            <div class="tit">접수일자</div>
+                            <div class="periodGroup">
+                                <input type="text" class="basic _calendar search" required readonly="readonly"/>
+                                <div>~</div>
+                                <input type="text" class="basic _calendar search" required readonly="readonly"/>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tit">진행상태</div>
+                            <select class="basic" required>
+                                <option>전체</option>
+                                <option>option01</option>
+                                <option>option02</option>
+                            </select>
+                        </li>
+                        <li>
+                            <div class="tit">접수자</div>
+                            <div class="_searchBox">
+                                <input type="text" class="basic" placeholder="검색어 입력"/>
+                                <button><span><img src="../../img/icon/icon_search_black.png" alt=""></span></button>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="_btn black small line">조회<img src="../../img/icon/icon_search_black.png" alt="검색"></button>
+                        </li>
+                    </ul>
+                    <div class="_tableBox leftFix headFix _scroll">
+                        <table class="_table">
+                            <thead>
+                                <tr>
+                                    <th class="fix"><p>선택</p></th>
+                                    <th class="fix"><p>접수일자</p></th>
+                                    <th class="fix"><p>모델</p></th>
+                                    <th class="fix"><p>고객유형</p></th>
+                                    <th class="fix"><p>접수구분</p></th>
+                                    <th class="fix"><p>상담원</p></th>
+                                    <th><p>고객명</p></th>
+                                    <th><p>상호</p></th>
+                                    <th><p>전화번호</p></th>
+                                    <th><p>휴대전화</p></th>
+                                    <th><p>주소</p></th>
+                                    <th><p>제품명</p></th>
+                                    <th><p>진행상태</p></th>
+                                    <th><p>접수자</p></th>
+                                    <th><p>접수내용</p></th>
+                                    <th><p>불량증상</p></th>
+                                    <th><p>불량부위</p></th>
+                                    <th><p>불량원인</p></th>
+                                    <th><p>특기사항</p></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fix"><p class="c"><button class="_btn blue s_small lightSurface"><span>선택</span></button></p></td>
+                                    <td class="fix"><p class="c">2025-00-00</p></td>
+                                    <td class="fix"><p>LS-1665RF</p></td>
+                                    <td class="fix"><p class="c">판매처</p></td>
+                                    <td class="fix"><p class="c">상담원접수</p></td>
+                                    <td class="fix"><p class="c">김길동</p></td>
+                                    <td><p class="c">홍길동</p></td>
+                                    <td><p>성주주방</p></td>
+                                    <td><p class="c">02-0000-0000</p></td>
+                                    <td><p class="c">010-0000-0000</p></td>
+                                    <td><p>서울특별시 송파구 문정동</p></td>
+                                    <td><p>업소용냉장고</p></td>
+                                    <td><p class="c">미배정</p></td>
+                                    <td><p class="c">김길동</p></td>
+                                    <td><p class="c">냉장실 누수</p></td>
+                                    <td><p class="c"></p></td>
+                                    <td><p class="r"></p></td>
+                                    <td><p class="c"></p></td>
+                                    <td><p></p></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="_bottomBtnBox">
+                        <div class="_btnBox">
+                            <button class="_btn black small lightSurface _actClose"><span>취소</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--이미지 확대보기-->
+    <div class="_popup previewImg">
+        <div class="popBox _1080">
+            <div class="head">
+                <div class="popName">이미지 확대보기</div>
+                <button class="_actClose"><img src="../../img/icon/icon_x.png"></button>
+            </div>
+            <div class="popCon">
+                <div class="contentBasic">
+                    <div class="previewImgBox"><img src="https://dummyimage.com/400x200/000/fff.png" alt=""></div>
+                    <ul class="imgList">
+                        <li><img src="https://dummyimage.com/600x400/000/fff.png" alt=""></li>
+                        <li><img src="https://dummyimage.com/600x600/000/fff.png" alt=""></li>
+                        <li><img src="https://dummyimage.com/200x100/000/fff.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
