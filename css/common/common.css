@@ -26,7 +26,6 @@ input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; marg
 .basic.failure { position: relative; background-image: url(../../img/common/icon_failure.png); background-position: calc(100% - 8px); background-size: 16px; padding-right: 32px; } 
 .basic.required { background-color: #FFEBEB; } 
 ._btnSearch input.required:disabled { background-color: #FFEBEB; } 
-
 .basic.tableEdit { background-color: var(--yellow_03); width: initial; min-width: initial; } 
 
 
@@ -175,7 +174,7 @@ input[type="month"]::-webkit-calendar-picker-indicator:focus { outline: 0; borde
 ._btn.line.orange span { color: var(--orange); } 
 ._btn.line.red span { color: var(--red); } 
 ._btn.line.black span { color: var(--color_12); } 
-._btn.line.mint span { color: var(--mint); } 
+._btn.line.mint span { color: var(--mint);} 
 
 /*형태-아이콘*/
 button.ico { border:1px solid transparent; height: 32px; padding: 0 8px; gap: 4px; border-radius: 3px; } 
@@ -469,6 +468,9 @@ button._delBtn { width: 18px; }
 ._fileAdd ._uploadBtn { width: 72px; background-color: var(--color_02); padding: 3px 0; } 
 ._fileAdd .fileName { color: var(--blue); text-decoration: underline; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: calc(100% - 120px); } 
 ._fileAdd ._delBtn { display: none; } 
+._fileAdd.multiple ._delBtn { display: block; } 
+._fileAdd.multiple .fileNameList li {display: flex;gap: 5px;}
+
 
 
 /*카운트*/

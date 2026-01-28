@@ -589,15 +589,18 @@
 								<th><p>첨부파일</p></th>
 								<td>
 									<div class="tableTdTxt">
-										<div class="_fileAdd">
-											<input type="file" id="fileInput">
+										<div class="_fileAdd multiple">
+											<input type="file" id="fileInput" multiple>
 											<button class="_uploadBtn">파일 선택</button>
-											<div class="fileName"></div>
-											<button class="_delBtn"><img src="../../img/icon/icon_del_X.png"></button>
+											<ul class="fileNameList">
+												
+											</ul>
+											
 										</div>
 									</div>
 								</td>
 							</tr>
+							<!--
 							<tr>
 								<th><p>수신자</p></th>
 								<td>
@@ -608,6 +611,7 @@
 									</ul>
 								</td>
 							</tr>
+							-->
 						</tbody>
 					</table>
 					<textarea class="basic _scroll"></textarea>
@@ -1022,7 +1026,7 @@
         <div class="ico"><img src="../../img/common/icon_check_w.png"></div>
         <div class="txt">공지사항이 등록되었습니다.</div>
     </div>
-	<script>loading.show();</script>
+
 
 
 

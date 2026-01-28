@@ -173,42 +173,110 @@ jQuery(function(){
         }	
     });
 
-    // 파일 첨부
+    // 첨부파일
     let fileURL = "";
+    let fileStore = [];     // 다중 업로드용 파일 객체 저장
+    let fileURLStore = [];  // 다중 업로드용 메모리 URL 저장
+
+    // 업로드 버튼 input 트리거
     $("._fileAdd ._uploadBtn").on("click", function () {
-        $("._fileAdd input").click();
+        $(this).closest("._fileAdd").find("input").click();
     });
-    // 파일 선택 시 파일명,삭제버튼 노출
+    //파일 선택
     $("._fileAdd input").on("change", function () {
-        if (this.files.length) {
-            fileURL = URL.createObjectURL(this.files[0]); 
-            let fileName = this.files[0].name;
-            $("._fileAdd .fileName").text(fileName);
-            $("._fileAdd .fileName").css("cursor", "pointer"); 
-            $("._fileAdd ._delBtn").show();
-        } else {
-            $("._fileAdd .fileName").text("");
-            $("._fileAdd ._delBtn").hide();
+        const $wrap = $(this).closest("._fileAdd");
+        const isMultiple = $wrap.hasClass("multiple");
+        const selectedFiles = Array.from(this.files);
+
+        if (!selectedFiles.length) return;
+
+        // MULTIPLE MODE 
+        if (isMultiple) {
+            // 개수 제한 로직 (최대 10개)
+            const currentCount = fileStore.length;
+            const totalCount = currentCount + selectedFiles.length;
+            if (totalCount > 10) {
+                alert("파일은 최대 10개까지만 업로드 가능합니다.");
+                this.value = ""; // input 초기화
+                return;
+            }
+            selectedFiles.forEach((f) => {
+                const isDup = fileStore.some(existing => existing.name === f.name && existing.size === f.size);
+                if (!isDup) {
+                    fileStore.push(f);
+                    fileURLStore.push(URL.createObjectURL(f));
+                }
+            });
+            renderFileList($wrap);
+            this.value = ""; 
+        } 
+        // SINGLE MODE
+        else {
+            if (fileURL) URL.revokeObjectURL(fileURL);
+            const file = selectedFiles[0];
+            fileURL = URL.createObjectURL(file);
+            
+            $wrap.find(".fileName").text(file.name).css("cursor", "pointer");
+            $wrap.find("._delBtn").show();
         }
     });
-    // 파일명 클릭 시 파일 다운로드
-    $("._fileAdd .fileName").on("click", function () {
-        if (fileURL) {
-            let a = document.createElement('a');
-            a.href = fileURL;
-            a.download = $(".fileName").text();
+    // 파일명 클릭 시 다운로드 
+    $("._fileAdd").on("click", ".fileName", function () {
+        const $wrap = $(this).closest("._fileAdd");
+        const isMultiple = $wrap.hasClass("multiple");
+        let targetURL = "";
+        let targetName = "";
+        if (isMultiple) {
+            const idx = $(this).closest(".fileItem").data("idx");
+            targetURL = fileURLStore[idx];
+            targetName = fileStore[idx].name;
+        } else {
+            targetURL = fileURL;
+            targetName = $(this).text();
+        }
+        if (targetURL) {
+            const a = document.createElement("a");
+            a.href = targetURL;
+            a.download = targetName;
             document.body.appendChild(a);
             a.click();
-            document.body.removeChild(a); 
+            document.body.removeChild(a);
         }
     });
-    // 삭제 버튼 클릭 시 파일명 및 입력 필드 초기화
-    $("._fileAdd ._delBtn").on("click", function () {
-        $("._fileAdd input").val("");
-        $("._fileAdd .fileName").text("");
-        $("._fileAdd ._delBtn").hide();
-        fileURL = "";
+    // 삭제 버튼 클릭
+    $("._fileAdd").on("click", "._delBtn", function () {
+        const $wrap = $(this).closest("._fileAdd");
+        if ($wrap.hasClass("multiple")) {
+            const $li = $(this).closest(".fileItem");
+            const idx = Number($li.data("idx"));
+            // 메모리 해제 및 배열 삭제
+            URL.revokeObjectURL(fileURLStore[idx]);
+            fileStore.splice(idx, 1);
+            fileURLStore.splice(idx, 1);
+            renderFileList($wrap); // 리스트 재정렬 및 출력
+        } else {
+            $wrap.find("input").val("");
+            $wrap.find(".fileName").text("");
+            $(this).hide();
+            if (fileURL) URL.revokeObjectURL(fileURL);
+            fileURL = "";
+        }
     });
+    //다중 파일 리스트 렌더링 함수
+    function renderFileList($wrap) {
+        const $list = $wrap.find(".fileNameList");
+        $list.empty();
+        fileStore.forEach((f, i) => {
+            $list.append(`
+                <li class="fileItem" data-idx="${i}">
+                    <button type="button" class="fileName">${f.name}</button>
+                    <button type="button" class="_delBtn">
+                        <img src="../../img/icon/icon_del_X.png" alt="삭제">
+                    </button>
+                </li>
+            `);
+        });
+    }
 
 
     //테이블 가로 스크롤 고정 col + addClass fixScroll 
