@@ -430,7 +430,7 @@
 	</div>
    
     <!--입금일/배송일/운송장번호-->
-    <div class="_popup salesDepositEdit" style="display: flex;">
+    <div class="_popup salesDepositEdit">
         <div class="popBox _1600">
             <div class="head">
                 <div class="popName">발송관리 설정</div>
@@ -439,44 +439,48 @@
             <div class="popCon">
                 <div class="contentBasic scroll">
                     <div class="_formGroup">
-                        <div class="_tableLayout">
-                            <div class="fontHead_B colBlue">83933</div>
-                            <table class="_table aligH">
-                                <tbody>
-                                    <tr>
-                                        <th><p>고객명</p></th>
-                                        <td><p>홍길동</p></td>
-                                    </tr>
-                                    <tr>
-                                        <th><p>상호</p></th>
-                                        <td><p>태마루</p></td>
-                                    </tr>
-                                    <tr>
-                                        <th><p>배송비</p></th>
-                                        <td><p>선불</p></td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
-                            <div class="total"><span class="txt">총결제 금액</span><span class="fontBody_B">000,000원</span></div>
-                            <div class="_dotTit">배송정보</div>
-                            <table class="_table aligH edit">
-                                <tbody>
-                                    <tr>
-                                        <th><p>운송장번호</p></th>
-                                        <td><input type="text" class="basic" placeholder="입력하세요." value="0000-0000-0000"/></td>
-                                    </tr>
-                                    <tr>
-                                        <th><p>입금일</p></th>
-                                        <td><input type="date" class="basic"></td>
-                                    </tr>
-                                    <tr>
+                        <div class="_flex gap_10">
+                            <div class="_tableLayout">
+                                <div class="fontHead_B colBlue">83933</div>
+                                <table class="_table aligH">
+                                    <tbody>
+                                        <tr>
+                                            <th><p>고객명</p></th>
+                                            <td><p>홍길동</p></td>
+                                        </tr>
+                                        <tr>
+                                            <th><p>상호</p></th>
+                                            <td><p>태마루</p></td>
+                                        </tr>
+                                        <tr>
+                                            <th><p>배송비</p></th>
+                                            <td><p>선불</p></td>
+                                        </tr>
                                         
-                                        <th><p>배송일</p></th>
-                                        <td><input type="date" class="basic"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                                <div class="total"><span class="txt">총결제 금액</span><span class="fontBody_B">000,000원</span></div>
+                            </div>
+                            <div class="_tableLayout">
+                                <div class="_dotTit">배송정보</div>
+                                <table class="_table aligH edit">
+                                    <tbody>
+                                        <tr>
+                                            <th><p>운송장번호</p></th>
+                                            <td><input type="text" class="basic" placeholder="입력하세요." value="0000-0000-0000"/></td>
+                                        </tr>
+                                        <tr>
+                                            <th><p>입금일</p></th>
+                                            <td><input type="date" class="basic"></td>
+                                        </tr>
+                                        <tr>
+                                            
+                                            <th><p>배송일</p></th>
+                                            <td><input type="date" class="basic"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <div class="_tableLayout">
                             <div class="_dotTit">출고정보</div>
@@ -543,16 +547,60 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class="_tableLayout partList">
+                            <div class="_flex between alignC">
+                                <div class="_dotTit">부품선택</div>
+                                <button class="_btn mint small line _actPOP"><span class="multiPart">부품추가</span></button>
+                            </div>
+                            <div class="_tableBox headFix _scroll">
+                                <table class="_table">
+                                    <thead>
+                                        <tr>
+                                            <th><p>순번</p></th>
+                                            <th><p>품목코드</p></th>
+                                            <th><p>모델</p></th>
+                                            <th><p>품명</p></th>
+                                            <th><p>규격</p></th>
+                                            <th><p>수량</p></th>
+                                            <th><p>수량확인</p></th>
+                                            <th><p>현재재고</p></th>
+                                            <th><p>단가</p></th>
+                                            <th><p>합계</p></th>
+                                            <th><p>비고</p></th>
+                                            <th><p>관리</p></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><p class="c">0</p></td>
+                                            <td><p>R3233-450-FT</p></td>
+                                            <td><p>/MW/JW,Z241MW,Z235MW/MR/GK</p></td>
+                                            <td><p>DIGITAL THERMO CONTROLLER(디지털온도컨트롤러)</p></td>
+                                            <td><p>4열*5단/348*101*472/LT-1224R~1834R,LUCD-ALL(NEW)</p></td>
+                                            <td><p class="r">56</p></td>
+                                            <td><input type="number" class="basic num tableEdit"></td>
+                                            <td><p class="r">0</p></td>
+                                            <td><p class="r">000,000</p></td>
+                                            <td><p class="r">000,000</p></td>
+                                            <td><input type="text" class="basic tableEdit" placeholder="입력하세요"></td>
+                                            <td><p class="c"><button class="_delBtn"><img src="../../img/icon/icon_del_X.png"></button></p></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                              
+                        </div>
                         <div class="_tableLayout">
                             <div class="_dotTit">패킹관리</div>
                             <table class="_table packing">
+
                                 <thead>
                                     <tr>
                                         <th><p>분류</p></th>
                                         <th><p>부품명</p></th>
                                         <th><p>규격</p></th>
                                         <th><p>단가</p></th>
-                                        <th><p class="edit">수량</p></th>
+                                        <th><p>수량</p></th>
                                         <th><p>총금액</p></th>
                                     </tr>
                                 </thead>
@@ -562,7 +610,7 @@
                                         <td><p class="c">물류비용</p></td>
                                         <td><p class="c">소</p></td>
                                         <td><p class="r">3,000</p></td>
-                                        <td><input type="number" class="basic r" placeholder="0"></td>
+                                        <td><input type="number" class="basic r tableEdit" placeholder="0"></td>
                                         <td><p class="r">6,000</p></td>
                                     </tr>
                                     <tr>
@@ -570,7 +618,7 @@
                                         <td><p class="c">물류비용</p></td>
                                         <td><p class="c">중</p></td>
                                         <td><p class="r">3,000</p></td>
-                                        <td><input type="number" class="basic r" placeholder="0"></td>
+                                        <td><input type="number" class="basic r tableEdit" placeholder="0"></td>
                                         <td><p class="r">6,000</p></td>
                                     </tr>
                                     <tr>
@@ -578,7 +626,7 @@
                                         <td><p class="c">물류비용</p></td>
                                         <td><p class="c">대</p></td>
                                         <td><p class="r">3,000</p></td>
-                                        <td><input type="number" class="basic r" placeholder="0"></td>
+                                        <td><input type="number" class="basic r tableEdit" placeholder="0"></td>
                                         <td><p class="r">6,000</p></td>
                                     </tr>
                                     <tr>
@@ -586,7 +634,7 @@
                                         <td><p class="c">물류비용</p></td>
                                         <td><p class="c">이형</p></td>
                                         <td><p class="r">3,000</p></td>
-                                        <td><input type="number" class="basic r" placeholder="0"></td>
+                                        <td><input type="number" class="basic r tableEdit" placeholder="0"></td>
                                         <td><p class="r">6,000</p></td>
                                     </tr>
                                 </tbody>
