@@ -1,10 +1,36 @@
-.techdocBox { width: 960px; margin: 0 auto;; display: flex; flex-direction: column; gap: 24px; } 
-.techdocBox ._searchBox{width: 240px;}
-.techdocBox ._tab {justify-content: center; width: 100%; } 
-.techdocBox .techdoc {width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; margin: 0 auto;;border-top: 1px solid #000;; } 
-.techdocBox .techdoc li { border-bottom:1px solid var(--color_06); height: 52px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
-.techdocBox .techdoc li .tit { font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 10px; } 
-.techdocBox .techdoc li .tit img { width: 12px; } 
-.techdocBox .techdoc li .tit a { transition: 0.1s all; } 
-.techdocBox .techdoc li .tit a:hover { color: var(--blue); text-decoration: underline; } 
-.techdocBox .techdoc li .btn { display: flex; gap: 10px; } 
+
+.wrapper > section { height: 100vh; overflow: hidden; } 
+
+
+.wrapper > section .container { overflow: hidden; } 
+.wrapper > section .container ._layBoxList { overflow: hidden; } 
+.techdocBox { width: 960px;; margin: 0 auto;; display: flex; flex-direction: column; gap: 24px; height: 100%; flex: 1; overflow: hidden; } 
+.techdocBox ._tab { justify-content: center; width: 100%; } 
+.techdocBox .resultBox { flex: 1; overflow: hidden; display: flex; border-top: 1px solid #000;; gap: 36px; } 
+.techdocBox ._searchBox { width: 240px; } 
+
+.techdocBox .resultBox .techdoc { width: 100%; display: flex; flex-direction: column; margin: 0 auto;; overflow-y: auto; overflow-x: hidden; height: 100%; } 
+.techdocBox .resultBox .techdoc > li { width: 100%; border-bottom:1px solid var(--color_06); display: flex; flex-direction: column; padding: 10px 14px; gap: 4px; } 
+.techdocBox .resultBox .techdoc > li:hover { background-color: var(--color_01); } 
+.techdocBox .resultBox .techdoc li .flieBox { display: flex; justify-content: space-between; } 
+.techdocBox .resultBox .techdoc li .tit { font-weight: 600; display: flex; align-items: center; gap: 10px; } 
+.techdocBox .resultBox .techdoc li .tit img { width: 12px; } 
+.techdocBox .resultBox .techdoc li .tit a { transition: 0.1s all; font-size: 16px; } 
+.techdocBox .resultBox .techdoc li .tit a:hover { color: var(--blue); text-decoration: underline; } 
+.techdocBox .resultBox .techdoc li .btn { display: flex; gap: 10px; } 
+.techdocBox .resultBox .techdoc li .filePath { display: flex; gap: 10px; padding-top: 6px; } 
+.techdocBox .resultBox .techdoc li .filePath li { color: var(--color_08); font-size: 12px; position: relative; padding-right: 20px; } 
+.techdocBox .resultBox .techdoc li .filePath li:after { content: ""; display: block; width: 10px; height: 100%; background-image: url(../../img/arrow/arrow_right_07.png); background-position: right; top: 0; right: 0; position: absolute; background-size: 100%; } 
+.techdocBox .resultBox .techdoc li .filePath li:last-child { padding-right: 0; } 
+.techdocBox .resultBox .techdoc li .filePath li:last-child:after { display: none; } 
+._folderStructure { overflow: auto; width: 260px; background-color: var(--color_01); padding:20px 20px; display: flex; flex-direction: column; gap: 16px; } 
+._folderStructure li ul { display: none; } 
+._folderStructure button.on + ul { display: flex; } 
+._folderStructure > li > ul { gap: 14px; } 
+._folderStructure > li > ul > li >ul { gap: 4px; } 
+._folderStructure li ul { padding-left: 18px; flex-direction: column; } 
+._folderStructure button { background-image: url(../../img/icon/ico_folder.png); background-position: left; background-size: 10px; padding-left: 16px; padding: 4px 16px; padding-right: 0; font-size: 12px; } 
+._folderStructure button.on { background-image: url(../../img/icon/ico_folder_open_on.png); color: var(--blue); } 
+._folderStructure ul { display:none; } 
+._folderStructure button.is-open + ul { display:flex; } 
+.folderStructureempty { width: 100%; flex: 1; justify-content: center; display: flex; height: 100%; align-items: center; padding-bottom: 80%; color: var(--color_07); font-size: 16px; font-weight: 700; } 
