@@ -18,19 +18,19 @@
 .techdocBox .resultBox .techdoc li .tit a { transition: 0.1s all; font-size: 16px; } 
 .techdocBox .resultBox .techdoc li .tit a:hover { color: var(--blue); text-decoration: underline; } 
 .techdocBox .resultBox .techdoc li .btn { display: flex; gap: 10px; } 
-.techdocBox .resultBox .techdoc li .filePath { display: flex; gap: 10px; padding-top: 6px; } 
-.techdocBox .resultBox .techdoc li .filePath li { color: var(--color_08); font-size: 12px; position: relative; padding-right: 20px; } 
-.techdocBox .resultBox .techdoc li .filePath li:after { content: ""; display: block; width: 10px; height: 100%; background-image: url(../../img/arrow/arrow_right_07.png); background-position: right; top: 0; right: 0; position: absolute; background-size: 100%; } 
+.techdocBox .resultBox .techdoc li .filePath { display: flex; gap: 8px; padding-top: 6px; } 
+.techdocBox .resultBox .techdoc li .filePath li { color: var(--color_08); font-size: 12px; position: relative; padding-right: 14px; } 
+.techdocBox .resultBox .techdoc li .filePath li:after { content: ""; display: block; width: 10px; height: 100%; background-image: url(../../img/arrow/arrow_right_07.png); background-position: right; top: 0; right: 0; position: absolute; background-size: 8px; } 
 .techdocBox .resultBox .techdoc li .filePath li:last-child { padding-right: 0; } 
 .techdocBox .resultBox .techdoc li .filePath li:last-child:after { display: none; } 
-._folderStructure { overflow: auto; width: 260px; background-color: var(--color_01); padding:20px 20px; display: flex; flex-direction: column; gap: 16px; } 
-._folderStructure li ul { display: none; } 
-._folderStructure button.on + ul { display: flex; } 
-._folderStructure > li > ul { gap: 14px; } 
-._folderStructure > li > ul > li >ul { gap: 4px; } 
-._folderStructure li ul { padding-left: 18px; flex-direction: column; } 
-._folderStructure button { background-image: url(../../img/icon/ico_folder.png); background-position: left; background-size: 10px; padding-left: 16px; padding: 4px 16px; padding-right: 0; font-size: 12px; } 
-._folderStructure button.on { background-image: url(../../img/icon/ico_folder_open_on.png); color: var(--blue); } 
-._folderStructure ul { display:none; } 
-._folderStructure button.is-open + ul { display:flex; } 
+.folderStructure { overflow: auto; width: 260px; background-color: var(--color_01); padding:20px 20px; display: flex; flex-direction: column; gap: 16px; } 
+.folderStructure li ul { display: none; } 
+.folderStructure button.on + ul { display: flex; } 
+.folderStructure > li > ul { gap: 14px; } 
+.folderStructure > li > ul > li >ul { gap: 4px; } 
+.folderStructure li ul { padding-left: 18px; flex-direction: column; } 
+.folderStructure button { background-image: url(../../img/icon/ico_folder.png); background-position: left; background-size: 10px; padding-left: 16px; padding: 4px 16px; padding-right: 0; font-size: 12px; } 
+.folderStructure button.on { background-image: url(../../img/icon/ico_folder_open_on.png); color: var(--blue); } 
+.folderStructure ul { display:none; } 
+.folderStructure button.is-open + ul { display:flex; } 
 .folderStructureempty { width: 100%; flex: 1; justify-content: center; display: flex; height: 100%; align-items: center; padding-bottom: 80%; color: var(--color_07); font-size: 16px; font-weight: 700; } 

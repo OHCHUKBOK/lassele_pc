@@ -1,5 +1,5 @@
 $(function () {
-    const $tree = $("._folderStructure");
+    const $tree = $(".folderStructure");
     $tree.on("click", "button", function (e) {
         e.preventDefault();
         const $btn = $(this);
